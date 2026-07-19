@@ -31,9 +31,12 @@ function PreviewSurface({ datasetBase }) {
       try {
         const { createPreview } = await import('@visioncortex/xsvg-viewer');
         if (cancelled || !hostRef.current) return;
-        preview = createPreview(hostRef.current, { hashDeepLink: true, showErrors: true });
 
         const params = new URLSearchParams(window.location.search);
+        // ?slides=false starts a multi-artboard document with its rail collapsed.
+        const slides = params.get('slides') !== 'false';
+        preview = createPreview(hostRef.current, { hashDeepLink: true, showErrors: true, slides });
+
         const file = params.get('file');
         const shared = window.location.hash.match(/^#src=(.*)$/);
 

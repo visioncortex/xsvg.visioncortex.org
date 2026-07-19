@@ -8,7 +8,7 @@ import HomepageFeatures from '../components/HomepageFeatures';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const previewUrl = useBaseUrl('/preview/?file=artboards.xsvg');
+  const previewUrl = useBaseUrl('/preview/?file=artboards.xsvg&slides=false');
   const viewerUrl = useBaseUrl('/viewer/?file=artboards.xsvg');
   return (
     <header className={styles.hero}>

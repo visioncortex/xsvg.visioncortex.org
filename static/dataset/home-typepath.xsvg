@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:x="https://xsvg.visioncortex.org"
      viewBox="0 0 640 400" font-family="'Helvetica Neue', Arial, sans-serif">
-  <rect x="0" y="0" width="640" height="400" fill="#0f172a"/>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff"/>
 
   <!-- rainbow: glyphs rotate and bend along an arc -->
   <path id="arc" d="M60,196 C 200,72 440,72 580,196" fill="none" stroke="#334155" stroke-width="2"/>

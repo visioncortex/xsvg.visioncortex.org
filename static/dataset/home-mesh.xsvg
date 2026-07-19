@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:x="https://xsvg.visioncortex.org"
      viewBox="0 0 560 360" font-family="'Helvetica Neue', Arial, sans-serif">
-  <rect x="0" y="0" width="560" height="360" fill="#0f172a"/>
+  <rect x="0" y="0" width="560" height="360" fill="#ffffff"/>
 
   <!-- a single curved Coons patch: four corner colours on four edge cubics,
        compiled to a tiny texel-aligned PNG no browser can draw natively -->
@@ -20,5 +20,5 @@
 
   <!-- the patch wireframe: the same edge cubics, drawn live over the baked field -->
   <path d="M75,98 c108,-54 306,54 414,18 c27,54 -27,108 9,158 c-108,54 -306,-54 -414,-14 c-18,-54 18,-108 -9,-162 Z"
-        fill="none" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.7"/>
+        fill="none" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.7"/>
 </svg>
