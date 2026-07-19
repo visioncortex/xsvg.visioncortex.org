@@ -9,45 +9,38 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Text layout SVG never had',
-    file: 'region-flow.xsvg',
+    file: 'home-text-layout.xsvg',
     to: '/docs/text-layout/overview/',
     description:
       'Greedy wrapping, full justification, shrink-to-fit, and the party trick — flowing text inside any shape’s outline, not just a rectangle. Laid out from real font metrics.',
   },
   {
     title: 'Type on a path & envelope warps',
-    file: 'textpath.xsvg',
+    file: 'home-typepath.xsvg',
     to: '/docs/type-on-a-path/overview/',
     description:
       'Ride text along any curve — a live native textPath, or glyphs deformed with skew and ribbon. Bend whole shapes and outlined text through arch, flag, rise, fisheye, and perspective fields.',
   },
   {
     title: 'Mesh gradients, baked',
-    file: 'mesh.xsvg',
+    file: 'home-mesh.xsvg',
     to: '/docs/mesh-gradients/overview/',
     description:
-      'Corner colours on a quad/tri mesh — the smooth multi-focal blends no linear or radial gradient can express. SVG 2 specified them; no browser draws them. xsvg bakes them to a tiny texel-aligned PNG.',
+      'Corner colours on curved Coons patches — the smooth multi-focal blends no linear or radial gradient can express. SVG 2 specified them; no browser draws them. xsvg bakes them to a tiny texel-aligned PNG.',
   },
   {
     title: 'Diagrams that re-route themselves',
-    file: 'connectors.xsvg',
+    file: 'home-diagrams.xsvg',
     to: '/docs/diagrams/connectors/',
     description:
-      'Connectors route between two elements’ edges and re-derive when a box moves. Boolean path algebra, Minkowski offsets, tables with content-driven row heights — the document primitives SVG lacks.',
+      'Connectors route between two elements’ edges — as an orthogonal H–V–H rail or a smooth curve — and re-derive when a box moves. With boolean path algebra and Minkowski offsets, the diagram primitives SVG lacks.',
   },
   {
-    title: 'Charts from a coordinate frame',
-    file: 'pie.xsvg',
-    to: '/docs/charts/pie/',
+    title: 'Data visualization',
+    file: 'home-dataviz.xsvg',
+    to: '/docs/charts/plots/',
     description:
-      'A data-coordinate frame: plot maps a domain onto a pixel box for bars and lines; pie turns a value into an angle with explode, donut, and polar-area. Baked to plain shapes — no chart runtime.',
-  },
-  {
-    title: 'Design tokens & theming',
-    file: 'theme.xsvg',
-    to: '/docs/theming/overview/',
-    description:
-      'Declare a brand palette and a type scale as compile-time tokens. Fills reference var(name); text pulls a named font. Change a token and the whole document restyles — resolved before it ever ships.',
+      'A data-coordinate frame: plot maps a domain onto a pixel box for bars and lines; pie turns a value into an angle with explode, donut, and polar-area. Paired with content-driven tables — all baked to plain shapes, no chart runtime.',
   },
 ];
 

@@ -52,6 +52,10 @@ const config = {
 
   plugins: [xsvgViewerAlias],
 
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap',
+  ],
+
   presets: [
     [
       'classic',
@@ -140,8 +144,7 @@ const config = {
             title: 'More',
             items: [
               { label: 'GitHub', href: 'https://github.com/visioncortex/xsvg' },
-              { label: 'npm — viewer', href: 'https://www.npmjs.com/package/@visioncortex/xsvg-viewer' },
-              { label: 'npm — compile', href: 'https://www.npmjs.com/package/@visioncortex/xsvg-compile' },
+              { label: 'npm', href: 'https://www.npmjs.com/package/@visioncortex/xsvg-viewer' },
             ],
           },
         ],

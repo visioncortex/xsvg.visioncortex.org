@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:x="https://xsvg.visioncortex.org"
+     viewBox="0 0 640 400" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="400" fill="#0f172a"/>
+
+  <!-- rainbow: glyphs rotate and bend along an arc -->
+  <path id="arc" d="M60,196 C 200,72 440,72 580,196" fill="none" stroke="#334155" stroke-width="2"/>
+  <x:textpath in="#arc" effect="rainbow" font-family="-x-google-Anton" font-size="56" fill="#fbbf24">RAINBOW</x:textpath>
+
+  <!-- arch: an envelope warp baked over outlined text -->
+  <rect x="200" y="250" width="240" height="98" fill="none" stroke="#334155" stroke-dasharray="4 3"/>
+  <x:warp field="arch" bend="62">
+    <rect x="200" y="250" width="240" height="98" fill="#172554"/>
+    <x:textbox x="200" y="250" width="240" height="98" align="center" valign="middle" outline="true"
+               font-family="-x-google-Anton" font-size="56" fill="#7dd3fc">ARCH</x:textbox>
+  </x:warp>
+</svg>

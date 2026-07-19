@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:x="https://xsvg.visioncortex.org"
+     viewBox="0 0 720 360" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="720" height="360" fill="#ffffff"/>
+
+  <!-- left: a content-driven table -->
+  <x:table x="28" y="52" width="336" cols="* 90" cell-padding="11"
+           font-size="15" fill="#334155" stroke="#e2e8f0" stroke-width="1"
+           header-fill="#eef2ff" stripe="#f8fafc" valign="middle">
+    <x:tr><x:th align="start">Quarter</x:th><x:th>Share</x:th></x:tr>
+    <x:tr><x:td font-weight="600" fill="#4338ca">Q1</x:td><x:td>40%</x:td></x:tr>
+    <x:tr><x:td font-weight="600" fill="#0369a1">Q2</x:td><x:td>25%</x:td></x:tr>
+    <x:tr><x:td font-weight="600" fill="#b45309">Q3</x:td><x:td>20%</x:td></x:tr>
+    <x:tr><x:td font-weight="600" fill="#047857">Q4</x:td><x:td>15%</x:td></x:tr>
+  </x:table>
+
+  <!-- right: the same figures as a pie, one slice grown + exploded -->
+  <x:pie cx="560" cy="188" r="130" start="-90" stroke="#ffffff" stroke-width="2">
+    <x:slice value="40" fill="#6366f1" grow="1.08" explode="12"/>
+    <x:slice value="25" fill="#0ea5e9"/>
+    <x:slice value="20" fill="#f59e0b"/>
+    <x:slice value="15" fill="#10b981"/>
+  </x:pie>
+</svg>

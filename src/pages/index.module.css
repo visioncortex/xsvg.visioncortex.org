@@ -37,7 +37,12 @@ html[data-theme='dark'] .hero {
 .install {
   max-width: 28rem;
 }
+/* Positioning context so the callout can sit ABOVE the (clipped) preview box. */
+.heroPreviewWrap {
+  position: relative;
+}
 .heroPreview {
+  position: relative;
   border: 1px solid var(--ifm-toc-border-color);
   border-radius: 14px;
   overflow: hidden;
@@ -52,6 +57,47 @@ html[data-theme='dark'] .heroPreview {
   width: 100%;
   height: 460px;
   border: 0;
+}
+
+/* Hand-drawn one-line callout: text sits just above the preview box, the doodle
+   arrow dips down onto the slide. */
+.annotation {
+  position: absolute;
+  top: -30px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+  transition: transform 0.15s ease;
+}
+.annotation:hover {
+  transform: translateY(-1px);
+}
+.annotationText {
+  font-family: 'Caveat', 'Segoe Print', ui-rounded, cursive;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+.annotation:hover .annotationText {
+  text-decoration: underline;
+}
+.doodle {
+  width: 58px;
+  height: auto;
+  margin: -2px 24px 0 0;
+  color: var(--ifm-color-primary);
+  opacity: 0.9;
+}
+
+@media (max-width: 996px) {
+  .annotation {
+    display: none;
+  }
 }
 
 .compile {

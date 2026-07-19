@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:x="https://xsvg.visioncortex.org"
+     viewBox="0 0 640 360" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="360" fill="#ffffff"/>
+  <defs>
+    <style>
+      .node { fill: #eef2ff; stroke: #6366f1; stroke-width: 1.5; }
+      .lbl  { font-size: 15px; font-weight: 600; fill: #3730a3; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- x-major: horizontal-first orthogonal rail -->
+  <text x="40" y="46" font-size="13" fill="#64748b">route="x-major" · H–V–H rail</text>
+  <rect id="x1" class="node" x="40" y="70" width="120" height="58" rx="9"/>
+  <text class="lbl" x="100" y="105">A</text>
+  <rect id="x2" class="node" x="196" y="196" width="120" height="58" rx="9"/>
+  <text class="lbl" x="256" y="231">B</text>
+  <x:connector from="#x1" to="#x2" route="x-major" arrow="end" stroke="#0ea5e9" stroke-width="2.5"/>
+
+  <!-- curve: a smooth cubic between two nodes -->
+  <text x="368" y="46" font-size="13" fill="#64748b">route="curve"</text>
+  <rect id="c1" class="node" x="368" y="70" width="120" height="58" rx="29"/>
+  <text class="lbl" x="428" y="105">In</text>
+  <rect id="c2" class="node" x="512" y="240" width="112" height="58" rx="29"/>
+  <text class="lbl" x="568" y="275">Out</text>
+  <x:connector from="#c1" to="#c2" route="curve" arrow="end" stroke="#e11d48" stroke-width="2.5"/>
+</svg>

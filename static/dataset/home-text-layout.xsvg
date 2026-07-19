@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:x="https://xsvg.visioncortex.org"
+     viewBox="0 0 640 360" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="360" fill="#ffffff"/>
+
+  <!-- left: a justified paragraph — full lines flush, last line ragged -->
+  <rect id="pbox" x="28" y="40" width="272" height="284" rx="12" fill="#eff6ff" stroke="#60a5fa"/>
+  <x:textbox in="#pbox" padding="20" align="justify" line-height="1.4" font-size="16" fill="#0f172a">Justified text spreads the slack on every full line so both edges line up flush, while the paragraph's last line is left ragged — the real line breaking SVG never shipped.</x:textbox>
+
+  <!-- right: text flowed inside a circle's outline -->
+  <circle id="cir" cx="470" cy="182" r="130" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  <x:textbox in="#cir" align="center" valign="middle" padding="12" line-height="1.35" font-size="15" fill="#065f46">Text poured inside a circle keeps its first and last lines short and stretches the middle lines across the widest span of the disc.</x:textbox>
+</svg>

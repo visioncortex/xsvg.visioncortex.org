@@ -10,12 +10,16 @@ compile.
 
 ## Browser — `@visioncortex/xsvg-viewer`
 
-The WASM compiler plus a drop-in preview surface. The WASM is inlined, so it works in any bundler
-with no extra configuration.
+The WASM compiler plus drop-in viewer surfaces. The WASM is inlined, so it works in any bundler with
+no extra configuration.
 
 ```bash
 npm install @visioncortex/xsvg-viewer
 ```
+
+### Compile & preview API
+
+The low-level entry points — compile to a string, or mount a self-contained preview surface:
 
 ```ts
 import { compileXsvg, createPreview } from "@visioncortex/xsvg-viewer";
@@ -27,8 +31,44 @@ el.innerHTML = await compileXsvg(source);
 createPreview(host, { hashDeepLink: true }).render(source);
 ```
 
-There's also a single-file **`<xsvg-view>`** custom element for the simplest embed — one script tag,
-drop the element in, it renders like an image. See [Playground & preview](/docs/getting-started/playground-and-viewer/).
+### React components
+
+`react` is an optional peer dependency. Two components, from the `/react` entry point:
+
+```tsx
+import { XsvgView, XsvgViewInteractive } from "@visioncortex/xsvg-viewer/react";
+
+// static embed — compiles and renders inline, like an image
+<XsvgView src="/diagrams/pie.xsvg" />            // or source={`<svg …>…</svg>`}
+
+// full interactive viewer — pan/zoom, artboard deck, optional source inspector
+<XsvgViewInteractive src="/diagrams/deck.xsvg" inspector />
+```
+
+This documentation site uses both: `XsvgView` powers the inline examples, and `XsvgViewInteractive`
+powers the [viewer](/viewer/) behind every "Open in viewer" link. `XsvgViewInteractive` lazy-loads
+CodeMirror only when `inspector` is enabled.
+
+### Custom elements
+
+Prefer plain HTML with a bundler? Import an element's entry point once to register it, then use the
+tag anywhere:
+
+```ts
+import "@visioncortex/xsvg-viewer/element";       // registers <xsvg-view>
+import "@visioncortex/xsvg-viewer/interactive";   // registers <xsvg-view-interactive>
+```
+
+```html
+<xsvg-view src="diagram.xsvg"></xsvg-view>
+<xsvg-view-interactive src="deck.xsvg"></xsvg-view-interactive>
+```
+
+### Single-file bundle
+
+For the simplest embed with no bundler at all, the single-file build (`@visioncortex/xsvg-viewer/xsvg.js`)
+registers `<xsvg-view>` from one script tag — drop the element in and it renders like an image. See
+[Playground & preview](/docs/getting-started/playground-and-viewer/).
 
 ## Node — `@visioncortex/xsvg-compile`
 

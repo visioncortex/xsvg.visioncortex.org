@@ -9,6 +9,7 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const previewUrl = useBaseUrl('/preview/?file=artboards.xsvg');
+  const viewerUrl = useBaseUrl('/viewer/?file=artboards.xsvg');
   return (
     <header className={styles.hero}>
       <div className="container">
@@ -33,14 +34,38 @@ function HomepageHeader() {
               <CodeBlock language="bash">npm install @visioncortex/xsvg-viewer</CodeBlock>
             </div>
           </div>
-          <div className={styles.heroPreview}>
-            <iframe
-              className={styles.heroFrame}
-              src={previewUrl}
-              title="xsvg example — artboard slide deck"
-              loading="eager"
-              scrolling="no"
-            />
+          <div className={styles.heroPreviewWrap}>
+            <Link className={styles.annotation} to={viewerUrl} title="Open this deck in the interactive viewer">
+              <span className={styles.annotationText}>
+                this whole slide deck is one xsvg document — open it in the viewer →
+              </span>
+              <svg className={styles.doodle} viewBox="0 0 64 58" aria-hidden="true">
+                <path
+                  d="M48 4 C 58 22 44 30 24 44"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.6"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M24 44 L 38 43 M24 44 L 30 32"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Link>
+            <div className={styles.heroPreview}>
+              <iframe
+                className={styles.heroFrame}
+                src={previewUrl}
+                title="xsvg example — artboard slide deck"
+                loading="eager"
+                scrolling="no"
+              />
+            </div>
           </div>
         </div>
       </div>
