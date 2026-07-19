@@ -1,0 +1,25 @@
+# Docusaurus
+.docusaurus/
+build/
+dist/
+.cache-loader/
+
+# Dependencies
+node_modules/
+
+# NOTE: static/dataset/*.xsvg IS committed (CI has no access to the sibling xsvg
+# repo). Refresh it from ../xsvg/dataset with `npm run sync:dataset`.
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,133 @@
+.example {
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--ifm-background-surface-color);
+}
+
+.frameWrap {
+  position: relative;
+  width: 100%;
+  background-color: #f8fafc;
+  background-image:
+    linear-gradient(45deg, #eef2f7 25%, transparent 25%),
+    linear-gradient(-45deg, #eef2f7 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #eef2f7 75%),
+    linear-gradient(-45deg, transparent 75%, #eef2f7 75%);
+  background-size: 22px 22px;
+  background-position: 0 0, 0 11px, 11px -11px, -11px 0;
+}
+html[data-theme='dark'] .frameWrap {
+  background-color: #0b0f16;
+  background-image:
+    linear-gradient(45deg, #12171f 25%, transparent 25%),
+    linear-gradient(-45deg, #12171f 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #12171f 75%),
+    linear-gradient(-45deg, transparent 75%, #12171f 75%);
+}
+.frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Inline embed (<XsvgView>): center and fit-to-contain the compiled SVG in the box. */
+.embed {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.embed svg {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100%;
+  max-height: 100%;
+}
+.embedLoading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--ifm-color-emphasis-600);
+  font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  border-top: 1px solid var(--ifm-toc-border-color);
+  background: var(--ifm-background-surface-color);
+  font-size: 13px;
+}
+.title {
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+}
+.spacer {
+  flex: 1;
+}
+.btn {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+.link {
+  color: var(--ifm-color-emphasis-700);
+  text-decoration: none;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+.link:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+.linkPrimary {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+.linkPrimary:hover {
+  text-decoration: underline;
+}
+
+.source {
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+.source :global(.theme-code-block) {
+  margin: 0;
+  border-radius: 0;
+}
+.source :global(pre) {
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+.loadingSrc {
+  padding: 12px;
+  color: var(--ifm-color-emphasis-600);
+  font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.caption {
+  padding: 8px 12px;
+  border-top: 1px solid var(--ifm-toc-border-color);
+  color: var(--ifm-color-emphasis-700);
+  font-size: 13px;
+  font-style: italic;
+}

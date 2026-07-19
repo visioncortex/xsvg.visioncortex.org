@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:x="https://xsvg.visioncortex.org"
+     viewBox="0 0 720 280" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="720" height="280" fill="#ffffff"/>
+  <text x="20" y="28" font-size="13" font-weight="bold" fill="#0f172a">badges — text effects: curved rim text, an arched title, a glossy mesh medal</text>
+
+  <!-- 1. certified seal: text curved around the rim (textpath rainbow). Both
+          arcs are concentric with the seal (center 140,160, radius 60) so the
+          rim text sits just inside the ring. The stars are real SVG shapes —
+          a display font like Anton has no ★ glyph, so an outlined run would
+          render .notdef boxes; drawn geometry is sharp and font-independent. -->
+  <defs>
+    <path id="star" d="M0,-7 L1.7,-2.4 L6.7,-2.2 L2.8,0.9 L4.1,5.7 L0,2.9 L-4.1,5.7 L-2.8,0.9 L-6.7,-2.2 L-1.7,-2.4 Z"/>
+  </defs>
+  <circle cx="140" cy="160" r="86" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <circle cx="140" cy="160" r="72" fill="none" stroke="#c7d2fe" stroke-width="1.5"/>
+  <path id="rim-top" d="M85.6,134.6 A60,60 0 0,1 194.4,134.6" fill="none"/>
+  <path id="rim-bot" d="M90.9,194.4 A60,60 0 0,0 189.1,194.4" fill="none"/>
+  <x:textpath in="#rim-top" effect="rainbow" align="middle"
+              font-family="-x-google-Anton" font-size="18" fill="#3730a3">CERTIFIED</x:textpath>
+  <x:textpath in="#rim-bot" effect="rainbow" align="middle"
+              font-family="-x-google-Anton" font-size="13" fill="#6366f1">AUTHENTIC</x:textpath>
+  <use href="#star" x="74" y="160" fill="#6366f1"/>
+  <use href="#star" x="206" y="160" fill="#6366f1"/>
+  <text x="140" y="176" text-anchor="middle" font-family="-x-google-Anton" font-size="46" fill="#4338ca">2026</text>
+
+  <!-- 2. shield: an arched title baked with warp, subtitle region-flowed -->
+  <path id="shield" d="M300,78 q68,-18 136,0 v82 q0,58 -68,86 q-68,-28 -68,-86 z"
+        fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <x:textbox x="310" y="168" width="116" height="54" align="center" valign="middle" outline="true"
+             font-family="-x-google-Anton" font-size="15" fill="#fde68a"
+             stroke="#7c2d12" stroke-width="0.7">BANK-GRADE ENCRYPTION</x:textbox>
+  <x:warp field="arch" bend="48">
+    <x:textbox x="300" y="118" width="136" height="46" align="center" valign="middle"
+               outline="true" font-family="-x-google-Anton" font-size="34" fill="#b45309">SECURE</x:textbox>
+  </x:warp>
+
+  <!-- 3. glossy medal: circle filled by an SVG2 meshgradient (a real gel no
+          browser renders), a highlight sweep, and a drop-shadowed label -->
+  <defs>
+    <meshgradient id="gold" x="498" y="78">
+      <meshrow>
+        <meshpatch>
+          <stop path="l 164,0" stop-color="#fef3c7"/>
+          <stop path="l 0,164" stop-color="#f59e0b"/>
+          <stop path="l -164,0" stop-color="#92400e"/>
+          <stop path="l 0,-164" stop-color="#fbbf24"/>
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+    <clipPath id="medal-clip"><circle cx="580" cy="160" r="82"/></clipPath>
+  </defs>
+  <circle cx="580" cy="160" r="82" fill="url(#gold)" stroke="#78350f" stroke-width="2.5"/>
+  <ellipse cx="580" cy="120" rx="66" ry="34" fill="#ffffff" opacity="0.28" clip-path="url(#medal-clip)"/>
+  <text x="580" y="176" text-anchor="middle" font-family="-x-google-Anton" font-size="44"
+        fill="#fffbeb" filter="drop-shadow(0 2 3 #78350fcc)">PRO</text>
+</svg>

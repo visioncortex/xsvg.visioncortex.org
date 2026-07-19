@@ -1,0 +1,51 @@
+---
+title: "Element index"
+description: "Every xsvg element — the x:-prefixed extensions and the revived SVG elements — with a link to its reference."
+---
+
+# Element index
+
+Every element xsvg adds or revives, grouped by area. New elements are `x:`-prefixed; **revived** ones
+are real SVG names the compiler implements that browsers dropped or never shipped.
+
+## Text
+
+| Element | Summary | Reference |
+| --- | --- | --- |
+| `<text inline-size>` | wrap plain `<text>` at a width (revived SVG 2 attribute) | [Wrapping](/docs/text-layout/wrapping/) |
+| `<textArea>` | box text with align / auto-size (revived SVG Tiny 1.2) | [Wrapping](/docs/text-layout/wrapping/) |
+| `<x:textbox>` | box- or shape-bound text: padding, align, fit, region flow | [Textbox](/docs/text-layout/textbox/) |
+| `<tspan>` | inline styled run that flows and wraps with the paragraph | [Styled runs](/docs/text-layout/styled-runs/) |
+| `<tbreak/>` | forced line break (revived SVG Tiny 1.2) | [Wrapping](/docs/text-layout/wrapping/) |
+| `<x:p>` | a paragraph inside a textbox — spacing and per-paragraph style | [Paragraphs](/docs/paragraphs-lists-tables/paragraphs/) |
+| `<x:list>` / `<x:li>` | hanging-indent bullet / numbered lists with cycling markers | [Lists](/docs/paragraphs-lists-tables/lists/) |
+| `<x:table>` / `<x:tr>` / `<x:td>` / `<x:th>` | grid with author-set columns and content-driven row heights | [Tables](/docs/paragraphs-lists-tables/tables/) |
+| `<x:textpath>` | set text along a path — follow, skew, ribbon | [Type on a path](/docs/type-on-a-path/overview/) |
+
+## Geometry
+
+| Element | Summary | Reference |
+| --- | --- | --- |
+| `<x:warp>` | envelope distortion — presets, perspective, free distort, bend | [Warp](/docs/warp/overview/) |
+| `<x:boolean>` | live path algebra — union / subtract / intersect / exclude | [Booleans](/docs/diagrams/booleans/) |
+| `<x:offset>` | grow / shrink a region by a Minkowski distance | [Offset](/docs/diagrams/offset/) |
+| `<x:connector>` | a line routed between two elements' edges | [Connectors](/docs/diagrams/connectors/) |
+
+## Charts
+
+| Element | Summary | Reference |
+| --- | --- | --- |
+| `<x:plot>` / `<x:bars>` / `<x:bar>` / `<x:line>` | a linear data-coordinate frame for bar & line charts | [Plots](/docs/charts/plots/) |
+| `<x:pie>` / `<x:slice>` | pie / donut / polar-area — value to angle | [Pie](/docs/charts/pie/) |
+
+## Paint & theming
+
+| Element | Summary | Reference |
+| --- | --- | --- |
+| `<x:theme>` / `<x:color>` / `<x:font>` | compile-time design tokens (`var(name)`, `x:font="name"`) | [Theming](/docs/theming/overview/) |
+| `<x:mesh>` / `<x:face>` | Coons/tensor mesh gradients, baked to texel-aligned PNGs | [Mesh gradients](/docs/mesh-gradients/overview/) |
+| `<meshgradient>` | SVG 2 / Inkscape mesh gradient (revived as a fill source) | [Mesh gradients](/docs/mesh-gradients/overview/) |
+
+## See also
+
+- [Attribute index](/docs/reference/attribute-index/) — extension attributes on standard elements.

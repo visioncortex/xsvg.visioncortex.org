@@ -1,0 +1,438 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:x="https://xsvg.visioncortex.org"
+     viewBox="0 0 720 360" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="720" height="360" fill="#eef1f5"/>
+  <text x="28" y="34" font-size="14" font-weight="bold" fill="#1e293b">Aqua gel buttons — two patches: an opaque gel body + a capsule gloss overlay</text>
+  <text x="28" y="52" font-size="11" fill="#64748b">the gloss layer's mesh IS a smaller capsule (60% of the button height) — shape from geometry, shine from per-vertex alpha</text>
+
+  <rect x="160" y="80" width="400" height="120" rx="60" fill="#94a3b8" filter="blur(6)" opacity="0.55" transform="translate(0,7)"/>
+  <clipPath id="gel-aqua"><rect x="160" y="80" width="400" height="120" rx="60"/></clipPath>
+  <g clip-path="url(#gel-aqua)">
+  <!-- patch 1: the gel body -->
+  <x:mesh points="160,80 184,80 224,80 280,80 360,80 440,80 496,80 536,80 560,80 160,94.4 184,94.4 224,94.4 280,94.4 360,94.4 440,94.4 496,94.4 536,94.4 560,94.4 160,116 184,116 224,116 280,116 360,116 440,116 496,116 536,116 560,116 160,137.6 184,137.6 224,137.6 280,137.6 360,137.6 440,137.6 496,137.6 536,137.6 560,137.6 160,159.2 184,159.2 224,159.2 280,159.2 360,159.2 440,159.2 496,159.2 536,159.2 560,159.2 160,178.4 184,178.4 224,178.4 280,178.4 360,178.4 440,178.4 496,178.4 536,178.4 560,178.4 160,190.4 184,190.4 224,190.4 280,190.4 360,190.4 440,190.4 496,190.4 536,190.4 560,190.4 160,200 184,200 224,200 280,200 360,200 440,200 496,200 536,200 560,200">
+    <x:face v="0 1 10 9" fill="#1c55b0 #1c55b0 #2a62b9 #1c55b0"/>
+    <x:face v="1 2 11 10" fill="#1c55b0 #1c55b0 #6198dd #2a62b9"/>
+    <x:face v="2 3 12 11" fill="#1c55b0 #1c55b0 #74abe9 #6198dd"/>
+    <x:face v="3 4 13 12" fill="#1c55b0 #1c55b0 #75acea #74abe9"/>
+    <x:face v="4 5 14 13" fill="#1c55b0 #1c55b0 #74abe9 #75acea"/>
+    <x:face v="5 6 15 14" fill="#1c55b0 #1c55b0 #6198dd #74abe9"/>
+    <x:face v="6 7 16 15" fill="#1c55b0 #1c55b0 #2a62b9 #6198dd"/>
+    <x:face v="7 8 17 16" fill="#1c55b0 #1c55b0 #1c55b0 #2a62b9"/>
+    <x:face v="9 10 19 18" fill="#1c55b0 #2a62b9 #4078c7 #1c55b0"/>
+    <x:face v="10 11 20 19" fill="#2a62b9 #6198dd #7db4ef #4078c7"/>
+    <x:face v="11 12 21 20" fill="#6198dd #74abe9 #7db4ef #7db4ef"/>
+    <x:face v="12 13 22 21" fill="#74abe9 #75acea #7db4ef #7db4ef"/>
+    <x:face v="13 14 23 22" fill="#75acea #74abe9 #7db4ef #7db4ef"/>
+    <x:face v="14 15 24 23" fill="#74abe9 #6198dd #7db4ef #7db4ef"/>
+    <x:face v="15 16 25 24" fill="#6198dd #2a62b9 #4078c7 #7db4ef"/>
+    <x:face v="16 17 26 25" fill="#2a62b9 #1c55b0 #1c55b0 #4078c7"/>
+    <x:face v="18 19 28 27" fill="#1c55b0 #4078c7 #4179c8 #1c55b0"/>
+    <x:face v="19 20 29 28" fill="#4078c7 #7db4ef #7db4ef #4179c8"/>
+    <x:face v="20 21 30 29" fill="#7db4ef #7db4ef #7db4ef #7db4ef"/>
+    <x:face v="21 22 31 30" fill="#7db4ef #7db4ef #7db4ef #7db4ef"/>
+    <x:face v="22 23 32 31" fill="#7db4ef #7db4ef #7db4ef #7db4ef"/>
+    <x:face v="23 24 33 32" fill="#7db4ef #7db4ef #7db4ef #7db4ef"/>
+    <x:face v="24 25 34 33" fill="#7db4ef #4078c7 #4179c8 #7db4ef"/>
+    <x:face v="25 26 35 34" fill="#4078c7 #1c55b0 #1c55b0 #4179c8"/>
+    <x:face v="27 28 37 36" fill="#1c55b0 #4179c8 #457cc9 #1f57b1"/>
+    <x:face v="28 29 38 37" fill="#4179c8 #7db4ef #82b7f0 #457cc9"/>
+    <x:face v="29 30 39 38" fill="#7db4ef #7db4ef #84b8f0 #82b7f0"/>
+    <x:face v="30 31 40 39" fill="#7db4ef #7db4ef #85b9f0 #84b8f0"/>
+    <x:face v="31 32 41 40" fill="#7db4ef #7db4ef #84b8f0 #85b9f0"/>
+    <x:face v="32 33 42 41" fill="#7db4ef #7db4ef #82b7f0 #84b8f0"/>
+    <x:face v="33 34 43 42" fill="#7db4ef #4179c8 #457cc9 #82b7f0"/>
+    <x:face v="34 35 44 43" fill="#4179c8 #1c55b0 #1f57b1 #457cc9"/>
+    <x:face v="36 37 46 45" fill="#1f57b1 #457cc9 #5c8bce #3669ba"/>
+    <x:face v="37 38 47 46" fill="#457cc9 #82b7f0 #add0f4 #5c8bce"/>
+    <x:face v="38 39 48 47" fill="#82b7f0 #84b8f0 #c1ddf8 #add0f4"/>
+    <x:face v="39 40 49 48" fill="#84b8f0 #85b9f0 #cce4fa #c1ddf8"/>
+    <x:face v="40 41 50 49" fill="#85b9f0 #84b8f0 #c1ddf8 #cce4fa"/>
+    <x:face v="41 42 51 50" fill="#84b8f0 #82b7f0 #add0f4 #c1ddf8"/>
+    <x:face v="42 43 52 51" fill="#82b7f0 #457cc9 #5c8bce #add0f4"/>
+    <x:face v="43 44 53 52" fill="#457cc9 #1f57b1 #3669ba #5c8bce"/>
+    <x:face v="45 46 55 54" fill="#3669ba #5c8bce #507ec4 #4273be"/>
+    <x:face v="46 47 56 55" fill="#5c8bce #add0f4 #90b3e1 #507ec4"/>
+    <x:face v="47 48 57 56" fill="#add0f4 #c1ddf8 #bcd5f1 #90b3e1"/>
+    <x:face v="48 49 58 57" fill="#c1ddf8 #cce4fa #cee2f5 #bcd5f1"/>
+    <x:face v="49 50 59 58" fill="#cce4fa #c1ddf8 #bcd5f1 #cee2f5"/>
+    <x:face v="50 51 60 59" fill="#c1ddf8 #add0f4 #90b3e1 #bcd5f1"/>
+    <x:face v="51 52 61 60" fill="#add0f4 #5c8bce #507ec4 #90b3e1"/>
+    <x:face v="52 53 62 61" fill="#5c8bce #3669ba #4273be #507ec4"/>
+    <x:face v="54 55 64 63" fill="#4273be #507ec4 #3568b9 #3065b7"/>
+    <x:face v="55 56 65 64" fill="#507ec4 #90b3e1 #3d6fbc #3568b9"/>
+    <x:face v="56 57 66 65" fill="#90b3e1 #bcd5f1 #4877c0 #3d6fbc"/>
+    <x:face v="57 58 67 66" fill="#bcd5f1 #cee2f5 #4f7cc3 #4877c0"/>
+    <x:face v="58 59 68 67" fill="#cee2f5 #bcd5f1 #4877c0 #4f7cc3"/>
+    <x:face v="59 60 69 68" fill="#bcd5f1 #90b3e1 #3d6fbc #4877c0"/>
+    <x:face v="60 61 70 69" fill="#90b3e1 #507ec4 #3568b9 #3d6fbc"/>
+    <x:face v="61 62 71 70" fill="#507ec4 #4273be #3065b7 #3568b9"/>
+  </x:mesh>
+  <!-- patch 2: the gloss — a capsule 60% of the button's height, feathered -->
+  <x:mesh points="196.5,120.5 198.6,113.3 202.9,105.6 209.8,98.43 219.7,92.97 232,90.8 283.2,90.8 334.4,90.8 385.6,90.8 436.8,90.8 488,90.8 500.3,92.97 510.2,98.43 517.1,105.6 521.4,113.3 523.5,120.5 196.5,123 198.6,118.7 202.9,114.1 209.8,109.8 219.7,106.5 232,105.2 283.2,105.2 334.4,105.2 385.6,105.2 436.8,105.2 488,105.2 500.3,106.5 510.2,109.8 517.1,114.1 521.4,118.7 523.5,123 196.5,125.5 198.6,124.1 202.9,122.6 209.8,121.1 219.7,120 232,119.6 283.2,119.6 334.4,119.6 385.6,119.6 436.8,119.6 488,119.6 500.3,120 510.2,121.1 517.1,122.6 521.4,124.1 523.5,125.5 196.5,128.1 198.6,129.5 202.9,131 209.8,132.5 219.7,133.6 232,134 283.2,134 334.4,134 385.6,134 436.8,134 488,134 500.3,133.6 510.2,132.5 517.1,131 521.4,129.5 523.5,128.1 196.5,130.6 198.6,134.9 202.9,139.5 209.8,143.8 219.7,147.1 232,148.4 283.2,148.4 334.4,148.4 385.6,148.4 436.8,148.4 488,148.4 500.3,147.1 510.2,143.8 517.1,139.5 521.4,134.9 523.5,130.6 196.5,133.1 198.6,140.3 202.9,148 209.8,155.2 219.7,160.6 232,162.8 283.2,162.8 334.4,162.8 385.6,162.8 436.8,162.8 488,162.8 500.3,160.6 510.2,155.2 517.1,148 521.4,140.3 523.5,133.1">
+    <x:face v="0 1 17 16" fill="#deedfb98 #ebf4fdae #e1effc83 #d9eafa73"/>
+    <x:face v="1 2 18 17" fill="#ebf4fdae #f4fafec5 #e9f4fd95 #e1effc83"/>
+    <x:face v="2 3 19 18" fill="#f4fafec5 #fafdffdb #f0f7fda5 #e9f4fd95"/>
+    <x:face v="3 4 20 19" fill="#fafdffdb #fbfeffec #f3fafeb2 #f0f7fda5"/>
+    <x:face v="4 5 21 20" fill="#fbfeffec #fbfefff2 #f5fafeb7 #f3fafeb2"/>
+    <x:face v="5 6 22 21" fill="#fbfefff2 #fbfefff2 #f5fafeb7 #f5fafeb7"/>
+    <x:face v="6 7 23 22" fill="#fbfefff2 #fbfefff2 #f5fafeb7 #f5fafeb7"/>
+    <x:face v="7 8 24 23" fill="#fbfefff2 #fbfefff2 #f5fafeb7 #f5fafeb7"/>
+    <x:face v="8 9 25 24" fill="#fbfefff2 #fbfefff2 #f5fafeb7 #f5fafeb7"/>
+    <x:face v="9 10 26 25" fill="#fbfefff2 #fbfefff2 #f5fafeb7 #f5fafeb7"/>
+    <x:face v="10 11 27 26" fill="#fbfefff2 #fbfeffec #f3fafeb2 #f5fafeb7"/>
+    <x:face v="11 12 28 27" fill="#fbfeffec #fafdffdb #f0f7fda5 #f3fafeb2"/>
+    <x:face v="12 13 29 28" fill="#fafdffdb #f4fafec5 #e9f4fd95 #f0f7fda5"/>
+    <x:face v="13 14 30 29" fill="#f4fafec5 #ebf4fdae #e1effc83 #e9f4fd95"/>
+    <x:face v="14 15 31 30" fill="#ebf4fdae #deedfb98 #d9eafa73 #e1effc83"/>
+    <x:face v="16 17 33 32" fill="#d9eafa73 #e1effc83 #d7e9fa32 #d4e8fa2c"/>
+    <x:face v="17 18 34 33" fill="#e1effc83 #e9f4fd95 #daebfb39 #d7e9fa32"/>
+    <x:face v="18 19 35 34" fill="#e9f4fd95 #f0f7fda5 #ddedfb3f #daebfb39"/>
+    <x:face v="19 20 36 35" fill="#f0f7fda5 #f3fafeb2 #dfeefb44 #ddedfb3f"/>
+    <x:face v="20 21 37 36" fill="#f3fafeb2 #f5fafeb7 #e0eefb46 #dfeefb44"/>
+    <x:face v="21 22 38 37" fill="#f5fafeb7 #f5fafeb7 #e0eefb46 #e0eefb46"/>
+    <x:face v="22 23 39 38" fill="#f5fafeb7 #f5fafeb7 #e0eefb46 #e0eefb46"/>
+    <x:face v="23 24 40 39" fill="#f5fafeb7 #f5fafeb7 #e0eefb46 #e0eefb46"/>
+    <x:face v="24 25 41 40" fill="#f5fafeb7 #f5fafeb7 #e0eefb46 #e0eefb46"/>
+    <x:face v="25 26 42 41" fill="#f5fafeb7 #f5fafeb7 #e0eefb46 #e0eefb46"/>
+    <x:face v="26 27 43 42" fill="#f5fafeb7 #f3fafeb2 #dfeefb44 #e0eefb46"/>
+    <x:face v="27 28 44 43" fill="#f3fafeb2 #f0f7fda5 #ddedfb3f #dfeefb44"/>
+    <x:face v="28 29 45 44" fill="#f0f7fda5 #e9f4fd95 #daebfb39 #ddedfb3f"/>
+    <x:face v="29 30 46 45" fill="#e9f4fd95 #e1effc83 #d7e9fa32 #daebfb39"/>
+    <x:face v="30 31 47 46" fill="#e1effc83 #d9eafa73 #d4e8fa2c #d7e9fa32"/>
+    <x:face v="32 33 49 48" fill="#d4e8fa2c #d7e9fa32 #cce3f901 #cfe5f900"/>
+    <x:face v="33 34 50 49" fill="#d7e9fa32 #daebfb39 #c9e1f801 #cce3f901"/>
+    <x:face v="34 35 51 50" fill="#daebfb39 #ddedfb3f #c6dff801 #c9e1f801"/>
+    <x:face v="35 36 52 51" fill="#ddedfb3f #dfeefb44 #c3def701 #c6dff801"/>
+    <x:face v="36 37 53 52" fill="#dfeefb44 #e0eefb46 #c3ddf701 #c3def701"/>
+    <x:face v="37 38 54 53" fill="#e0eefb46 #e0eefb46 #c3ddf701 #c3ddf701"/>
+    <x:face v="38 39 55 54" fill="#e0eefb46 #e0eefb46 #c3ddf701 #c3ddf701"/>
+    <x:face v="39 40 56 55" fill="#e0eefb46 #e0eefb46 #c3ddf701 #c3ddf701"/>
+    <x:face v="40 41 57 56" fill="#e0eefb46 #e0eefb46 #c3ddf701 #c3ddf701"/>
+    <x:face v="41 42 58 57" fill="#e0eefb46 #e0eefb46 #c3ddf701 #c3ddf701"/>
+    <x:face v="42 43 59 58" fill="#e0eefb46 #dfeefb44 #c3def701 #c3ddf701"/>
+    <x:face v="43 44 60 59" fill="#dfeefb44 #ddedfb3f #c6dff801 #c3def701"/>
+    <x:face v="44 45 61 60" fill="#ddedfb3f #daebfb39 #c9e1f801 #c6dff801"/>
+    <x:face v="45 46 62 61" fill="#daebfb39 #d7e9fa32 #cce3f901 #c9e1f801"/>
+    <x:face v="46 47 63 62" fill="#d7e9fa32 #d4e8fa2c #cfe5f900 #cce3f901"/>
+    <x:face v="48 49 65 64" fill="#cfe5f900 #cce3f901 #c1dcf700 #cae2f800"/>
+    <x:face v="49 50 66 65" fill="#cce3f901 #c9e1f801 #b7d7f600 #c1dcf700"/>
+    <x:face v="50 51 67 66" fill="#c9e1f801 #c6dff801 #afd2f500 #b7d7f600"/>
+    <x:face v="51 52 68 67" fill="#c6dff801 #c3def701 #aacff400 #afd2f500"/>
+    <x:face v="52 53 69 68" fill="#c3def701 #c3ddf701 #a8cef400 #aacff400"/>
+    <x:face v="53 54 70 69" fill="#c3ddf701 #c3ddf701 #a8cef400 #a8cef400"/>
+    <x:face v="54 55 71 70" fill="#c3ddf701 #c3ddf701 #a8cef400 #a8cef400"/>
+    <x:face v="55 56 72 71" fill="#c3ddf701 #c3ddf701 #a8cef400 #a8cef400"/>
+    <x:face v="56 57 73 72" fill="#c3ddf701 #c3ddf701 #a8cef400 #a8cef400"/>
+    <x:face v="57 58 74 73" fill="#c3ddf701 #c3ddf701 #a8cef400 #a8cef400"/>
+    <x:face v="58 59 75 74" fill="#c3ddf701 #c3def701 #aacff400 #a8cef400"/>
+    <x:face v="59 60 76 75" fill="#c3def701 #c6dff801 #afd2f500 #aacff400"/>
+    <x:face v="60 61 77 76" fill="#c6dff801 #c9e1f801 #b7d7f600 #afd2f500"/>
+    <x:face v="61 62 78 77" fill="#c9e1f801 #cce3f901 #c1dcf700 #b7d7f600"/>
+    <x:face v="62 63 79 78" fill="#cce3f901 #cfe5f900 #cae2f800 #c1dcf700"/>
+    <x:face v="64 65 81 80" fill="#cae2f800 #c1dcf700 #b6d6f600 #c5def800"/>
+    <x:face v="65 66 82 81" fill="#c1dcf700 #b7d7f600 #a8cef400 #b6d6f600"/>
+    <x:face v="66 67 83 82" fill="#b7d7f600 #afd2f500 #a0c9f200 #a8cef400"/>
+    <x:face v="67 68 84 83" fill="#afd2f500 #aacff400 #9cc7f200 #a0c9f200"/>
+    <x:face v="68 69 85 84" fill="#aacff400 #a8cef400 #9cc7f200 #9cc7f200"/>
+    <x:face v="69 70 86 85" fill="#a8cef400 #a8cef400 #9cc7f200 #9cc7f200"/>
+    <x:face v="70 71 87 86" fill="#a8cef400 #a8cef400 #9cc7f200 #9cc7f200"/>
+    <x:face v="71 72 88 87" fill="#a8cef400 #a8cef400 #9cc7f200 #9cc7f200"/>
+    <x:face v="72 73 89 88" fill="#a8cef400 #a8cef400 #9cc7f200 #9cc7f200"/>
+    <x:face v="73 74 90 89" fill="#a8cef400 #a8cef400 #9cc7f200 #9cc7f200"/>
+    <x:face v="74 75 91 90" fill="#a8cef400 #aacff400 #9cc7f200 #9cc7f200"/>
+    <x:face v="75 76 92 91" fill="#aacff400 #afd2f500 #a0c9f200 #9cc7f200"/>
+    <x:face v="76 77 93 92" fill="#afd2f500 #b7d7f600 #a8cef400 #a0c9f200"/>
+    <x:face v="77 78 94 93" fill="#b7d7f600 #c1dcf700 #b6d6f600 #a8cef400"/>
+    <x:face v="78 79 95 94" fill="#c1dcf700 #cae2f800 #c5def800 #b6d6f600"/>
+  </x:mesh>
+  </g>
+  <rect x="160" y="80" width="400" height="120" rx="60" fill="none" stroke="#1c55b0" stroke-width="1.2" opacity="0.85"/>
+  <text x="360" y="155.84" text-anchor="middle" font-size="44" font-weight="600" fill="#0b2e6b">AQUA</text>
+
+  <rect x="100" y="250" width="220" height="64" rx="32" fill="#94a3b8" filter="blur(5)" opacity="0.55" transform="translate(0,5)"/>
+  <clipPath id="gel-cancel"><rect x="100" y="250" width="220" height="64" rx="32"/></clipPath>
+  <g clip-path="url(#gel-cancel)">
+  <!-- patch 1: the gel body -->
+  <x:mesh points="100,250 113.2,250 135.2,250 166,250 210,250 254,250 284.8,250 306.8,250 320,250 100,257.7 113.2,257.7 135.2,257.7 166,257.7 210,257.7 254,257.7 284.8,257.7 306.8,257.7 320,257.7 100,269.2 113.2,269.2 135.2,269.2 166,269.2 210,269.2 254,269.2 284.8,269.2 306.8,269.2 320,269.2 100,280.7 113.2,280.7 135.2,280.7 166,280.7 210,280.7 254,280.7 284.8,280.7 306.8,280.7 320,280.7 100,292.2 113.2,292.2 135.2,292.2 166,292.2 210,292.2 254,292.2 284.8,292.2 306.8,292.2 320,292.2 100,302.5 113.2,302.5 135.2,302.5 166,302.5 210,302.5 254,302.5 284.8,302.5 306.8,302.5 320,302.5 100,308.9 113.2,308.9 135.2,308.9 166,308.9 210,308.9 254,308.9 284.8,308.9 306.8,308.9 320,308.9 100,314 113.2,314 135.2,314 166,314 210,314 254,314 284.8,314 306.8,314 320,314">
+    <x:face v="0 1 10 9" fill="#454e5c #454e5c #545d6b #454e5c"/>
+    <x:face v="1 2 11 10" fill="#454e5c #454e5c #9099a7 #545d6b"/>
+    <x:face v="2 3 12 11" fill="#454e5c #454e5c #a4aebc #9099a7"/>
+    <x:face v="3 4 13 12" fill="#454e5c #454e5c #a5afbd #a4aebc"/>
+    <x:face v="4 5 14 13" fill="#454e5c #454e5c #a4aebc #a5afbd"/>
+    <x:face v="5 6 15 14" fill="#454e5c #454e5c #9099a7 #a4aebc"/>
+    <x:face v="6 7 16 15" fill="#454e5c #454e5c #545d6b #9099a7"/>
+    <x:face v="7 8 17 16" fill="#454e5c #454e5c #454e5c #545d6b"/>
+    <x:face v="9 10 19 18" fill="#454e5c #545d6b #6c7684 #454e5c"/>
+    <x:face v="10 11 20 19" fill="#545d6b #9099a7 #aeb8c6 #6c7684"/>
+    <x:face v="11 12 21 20" fill="#9099a7 #a4aebc #aeb8c6 #aeb8c6"/>
+    <x:face v="12 13 22 21" fill="#a4aebc #a5afbd #aeb8c6 #aeb8c6"/>
+    <x:face v="13 14 23 22" fill="#a5afbd #a4aebc #aeb8c6 #aeb8c6"/>
+    <x:face v="14 15 24 23" fill="#a4aebc #9099a7 #aeb8c6 #aeb8c6"/>
+    <x:face v="15 16 25 24" fill="#9099a7 #545d6b #6c7684 #aeb8c6"/>
+    <x:face v="16 17 26 25" fill="#545d6b #454e5c #454e5c #6c7684"/>
+    <x:face v="18 19 28 27" fill="#454e5c #6c7684 #6d7684 #454e5c"/>
+    <x:face v="19 20 29 28" fill="#6c7684 #aeb8c6 #aeb8c6 #6d7684"/>
+    <x:face v="20 21 30 29" fill="#aeb8c6 #aeb8c6 #aeb8c6 #aeb8c6"/>
+    <x:face v="21 22 31 30" fill="#aeb8c6 #aeb8c6 #aeb8c6 #aeb8c6"/>
+    <x:face v="22 23 32 31" fill="#aeb8c6 #aeb8c6 #aeb8c6 #aeb8c6"/>
+    <x:face v="23 24 33 32" fill="#aeb8c6 #aeb8c6 #aeb8c6 #aeb8c6"/>
+    <x:face v="24 25 34 33" fill="#aeb8c6 #6c7684 #6d7684 #aeb8c6"/>
+    <x:face v="25 26 35 34" fill="#6c7684 #454e5c #454e5c #6d7684"/>
+    <x:face v="27 28 37 36" fill="#454e5c #6d7684 #707987 #47505e"/>
+    <x:face v="28 29 38 37" fill="#6d7684 #aeb8c6 #b1bbc9 #707987"/>
+    <x:face v="29 30 39 38" fill="#aeb8c6 #aeb8c6 #b2bcc9 #b1bbc9"/>
+    <x:face v="30 31 40 39" fill="#aeb8c6 #aeb8c6 #b3bdca #b2bcc9"/>
+    <x:face v="31 32 41 40" fill="#aeb8c6 #aeb8c6 #b2bcc9 #b3bdca"/>
+    <x:face v="32 33 42 41" fill="#aeb8c6 #aeb8c6 #b1bbc9 #b2bcc9"/>
+    <x:face v="33 34 43 42" fill="#aeb8c6 #6d7684 #707987 #b1bbc9"/>
+    <x:face v="34 35 44 43" fill="#6d7684 #454e5c #47505e #707987"/>
+    <x:face v="36 37 46 45" fill="#47505e #707987 #808894 #5a636f"/>
+    <x:face v="37 38 47 46" fill="#707987 #b1bbc9 #cbd2db #808894"/>
+    <x:face v="38 39 48 47" fill="#b1bbc9 #b2bcc9 #d8dee6 #cbd2db"/>
+    <x:face v="39 40 49 48" fill="#b2bcc9 #b3bdca #dfe4eb #d8dee6"/>
+    <x:face v="40 41 50 49" fill="#b3bdca #b2bcc9 #d8dee6 #dfe4eb"/>
+    <x:face v="41 42 51 50" fill="#b2bcc9 #b1bbc9 #cbd2db #d8dee6"/>
+    <x:face v="42 43 52 51" fill="#b1bbc9 #707987 #808894 #cbd2db"/>
+    <x:face v="43 44 53 52" fill="#707987 #47505e #5a636f #808894"/>
+    <x:face v="45 46 55 54" fill="#5a636f #808894 #717884 #656d79"/>
+    <x:face v="46 47 56 55" fill="#808894 #cbd2db #aab1ba #717884"/>
+    <x:face v="47 48 57 56" fill="#cbd2db #d8dee6 #cfd4db #aab1ba"/>
+    <x:face v="48 49 58 57" fill="#d8dee6 #dfe4eb #dce0e6 #cfd4db"/>
+    <x:face v="49 50 59 58" fill="#dfe4eb #d8dee6 #cfd4db #dce0e6"/>
+    <x:face v="50 51 60 59" fill="#d8dee6 #cbd2db #aab1ba #cfd4db"/>
+    <x:face v="51 52 61 60" fill="#cbd2db #808894 #717884 #aab1ba"/>
+    <x:face v="52 53 62 61" fill="#808894 #5a636f #656d79 #717884"/>
+    <x:face v="54 55 64 63" fill="#656d79 #717884 #5a626f #565e6b"/>
+    <x:face v="55 56 65 64" fill="#717884 #aab1ba #606875 #5a626f"/>
+    <x:face v="56 57 66 65" fill="#aab1ba #cfd4db #69717d #606875"/>
+    <x:face v="57 58 67 66" fill="#cfd4db #dce0e6 #6f7782 #69717d"/>
+    <x:face v="58 59 68 67" fill="#dce0e6 #cfd4db #69717d #6f7782"/>
+    <x:face v="59 60 69 68" fill="#cfd4db #aab1ba #606875 #69717d"/>
+    <x:face v="60 61 70 69" fill="#aab1ba #717884 #5a626f #606875"/>
+    <x:face v="61 62 71 70" fill="#717884 #656d79 #565e6b #5a626f"/>
+  </x:mesh>
+  <!-- patch 2: the gloss — a capsule 60% of the button's height, feathered -->
+  <x:mesh points="119.5,271.6 120.6,267.8 122.9,263.7 126.6,259.8 131.8,256.9 138.4,255.8 167,255.8 195.7,255.8 224.3,255.8 253,255.8 281.6,255.8 288.2,256.9 293.4,259.8 297.1,263.7 299.4,267.8 300.5,271.6 119.5,273 120.6,270.6 122.9,268.2 126.6,265.9 131.8,264.1 138.4,263.4 167,263.4 195.7,263.4 224.3,263.4 253,263.4 281.6,263.4 288.2,264.1 293.4,265.9 297.1,268.2 299.4,270.6 300.5,273 119.5,274.3 120.6,273.5 122.9,272.7 126.6,271.9 131.8,271.4 138.4,271.1 167,271.1 195.7,271.1 224.3,271.1 253,271.1 281.6,271.1 288.2,271.4 293.4,271.9 297.1,272.7 299.4,273.5 300.5,274.3 119.5,275.6 120.6,276.4 122.9,277.2 126.6,278 131.8,278.6 138.4,278.8 167,278.8 195.7,278.8 224.3,278.8 253,278.8 281.6,278.8 288.2,278.6 293.4,278 297.1,277.2 299.4,276.4 300.5,275.6 119.5,277 120.6,279.3 122.9,281.7 126.6,284 131.8,285.8 138.4,286.5 167,286.5 195.7,286.5 224.3,286.5 253,286.5 281.6,286.5 288.2,285.8 293.4,284 297.1,281.7 299.4,279.3 300.5,277 119.5,278.3 120.6,282.2 122.9,286.2 126.6,290.1 131.8,293 138.4,294.2 167,294.2 195.7,294.2 224.3,294.2 253,294.2 281.6,294.2 288.2,293 293.4,290.1 297.1,286.2 299.4,282.2 300.5,278.3">
+    <x:face v="0 1 17 16" fill="#eaeef298 #f2f4f7ae #ecf0f383 #e7ebf073"/>
+    <x:face v="1 2 18 17" fill="#f2f4f7ae #f8f9fbc5 #f1f4f795 #ecf0f383"/>
+    <x:face v="2 3 19 18" fill="#f8f9fbc5 #fbfcfddb #f5f7f9a5 #f1f4f795"/>
+    <x:face v="3 4 20 19" fill="#fbfcfddb #fcfdfeec #f7f9fbb2 #f5f7f9a5"/>
+    <x:face v="4 5 21 20" fill="#fcfdfeec #fcfdfef2 #f8fafbb7 #f7f9fbb2"/>
+    <x:face v="5 6 22 21" fill="#fcfdfef2 #fcfdfef2 #f8fafbb7 #f8fafbb7"/>
+    <x:face v="6 7 23 22" fill="#fcfdfef2 #fcfdfef2 #f8fafbb7 #f8fafbb7"/>
+    <x:face v="7 8 24 23" fill="#fcfdfef2 #fcfdfef2 #f8fafbb7 #f8fafbb7"/>
+    <x:face v="8 9 25 24" fill="#fcfdfef2 #fcfdfef2 #f8fafbb7 #f8fafbb7"/>
+    <x:face v="9 10 26 25" fill="#fcfdfef2 #fcfdfef2 #f8fafbb7 #f8fafbb7"/>
+    <x:face v="10 11 27 26" fill="#fcfdfef2 #fcfdfeec #f7f9fbb2 #f8fafbb7"/>
+    <x:face v="11 12 28 27" fill="#fcfdfeec #fbfcfddb #f5f7f9a5 #f7f9fbb2"/>
+    <x:face v="12 13 29 28" fill="#fbfcfddb #f8f9fbc5 #f1f4f795 #f5f7f9a5"/>
+    <x:face v="13 14 30 29" fill="#f8f9fbc5 #f2f4f7ae #ecf0f383 #f1f4f795"/>
+    <x:face v="14 15 31 30" fill="#f2f4f7ae #eaeef298 #e7ebf073 #ecf0f383"/>
+    <x:face v="16 17 33 32" fill="#e7ebf073 #ecf0f383 #e6eaef32 #e4e9ee2c"/>
+    <x:face v="17 18 34 33" fill="#ecf0f383 #f1f4f795 #e8ecf039 #e6eaef32"/>
+    <x:face v="18 19 35 34" fill="#f1f4f795 #f5f7f9a5 #eaedf13f #e8ecf039"/>
+    <x:face v="19 20 36 35" fill="#f5f7f9a5 #f7f9fbb2 #ebeef244 #eaedf13f"/>
+    <x:face v="20 21 37 36" fill="#f7f9fbb2 #f8fafbb7 #ebeff346 #ebeef244"/>
+    <x:face v="21 22 38 37" fill="#f8fafbb7 #f8fafbb7 #ebeff346 #ebeff346"/>
+    <x:face v="22 23 39 38" fill="#f8fafbb7 #f8fafbb7 #ebeff346 #ebeff346"/>
+    <x:face v="23 24 40 39" fill="#f8fafbb7 #f8fafbb7 #ebeff346 #ebeff346"/>
+    <x:face v="24 25 41 40" fill="#f8fafbb7 #f8fafbb7 #ebeff346 #ebeff346"/>
+    <x:face v="25 26 42 41" fill="#f8fafbb7 #f8fafbb7 #ebeff346 #ebeff346"/>
+    <x:face v="26 27 43 42" fill="#f8fafbb7 #f7f9fbb2 #ebeef244 #ebeff346"/>
+    <x:face v="27 28 44 43" fill="#f7f9fbb2 #f5f7f9a5 #eaedf13f #ebeef244"/>
+    <x:face v="28 29 45 44" fill="#f5f7f9a5 #f1f4f795 #e8ecf039 #eaedf13f"/>
+    <x:face v="29 30 46 45" fill="#f1f4f795 #ecf0f383 #e6eaef32 #e8ecf039"/>
+    <x:face v="30 31 47 46" fill="#ecf0f383 #e7ebf073 #e4e9ee2c #e6eaef32"/>
+    <x:face v="32 33 49 48" fill="#e4e9ee2c #e6eaef32 #dfe4ea01 #e1e6eb00"/>
+    <x:face v="33 34 50 49" fill="#e6eaef32 #e8ecf039 #dde3e901 #dfe4ea01"/>
+    <x:face v="34 35 51 50" fill="#e8ecf039 #eaedf13f #dbe1e801 #dde3e901"/>
+    <x:face v="35 36 52 51" fill="#eaedf13f #ebeef244 #dae0e701 #dbe1e801"/>
+    <x:face v="36 37 53 52" fill="#ebeef244 #ebeff346 #dadfe601 #dae0e701"/>
+    <x:face v="37 38 54 53" fill="#ebeff346 #ebeff346 #dadfe601 #dadfe601"/>
+    <x:face v="38 39 55 54" fill="#ebeff346 #ebeff346 #dadfe601 #dadfe601"/>
+    <x:face v="39 40 56 55" fill="#ebeff346 #ebeff346 #dadfe601 #dadfe601"/>
+    <x:face v="40 41 57 56" fill="#ebeff346 #ebeff346 #dadfe601 #dadfe601"/>
+    <x:face v="41 42 58 57" fill="#ebeff346 #ebeff346 #dadfe601 #dadfe601"/>
+    <x:face v="42 43 59 58" fill="#ebeff346 #ebeef244 #dae0e701 #dadfe601"/>
+    <x:face v="43 44 60 59" fill="#ebeef244 #eaedf13f #dbe1e801 #dae0e701"/>
+    <x:face v="44 45 61 60" fill="#eaedf13f #e8ecf039 #dde3e901 #dbe1e801"/>
+    <x:face v="45 46 62 61" fill="#e8ecf039 #e6eaef32 #dfe4ea01 #dde3e901"/>
+    <x:face v="46 47 63 62" fill="#e6eaef32 #e4e9ee2c #e1e6eb00 #dfe4ea01"/>
+    <x:face v="48 49 65 64" fill="#e1e6eb00 #dfe4ea01 #d8dee500 #dee3e900"/>
+    <x:face v="49 50 66 65" fill="#dfe4ea01 #dde3e901 #d3d9e200 #d8dee500"/>
+    <x:face v="50 51 67 66" fill="#dde3e901 #dbe1e801 #ced5de00 #d3d9e200"/>
+    <x:face v="51 52 68 67" fill="#dbe1e801 #dae0e701 #cad2dc00 #ced5de00"/>
+    <x:face v="52 53 69 68" fill="#dae0e701 #dadfe601 #c9d1db00 #cad2dc00"/>
+    <x:face v="53 54 70 69" fill="#dadfe601 #dadfe601 #c9d1db00 #c9d1db00"/>
+    <x:face v="54 55 71 70" fill="#dadfe601 #dadfe601 #c9d1db00 #c9d1db00"/>
+    <x:face v="55 56 72 71" fill="#dadfe601 #dadfe601 #c9d1db00 #c9d1db00"/>
+    <x:face v="56 57 73 72" fill="#dadfe601 #dadfe601 #c9d1db00 #c9d1db00"/>
+    <x:face v="57 58 74 73" fill="#dadfe601 #dadfe601 #c9d1db00 #c9d1db00"/>
+    <x:face v="58 59 75 74" fill="#dadfe601 #dae0e701 #cad2dc00 #c9d1db00"/>
+    <x:face v="59 60 76 75" fill="#dae0e701 #dbe1e801 #ced5de00 #cad2dc00"/>
+    <x:face v="60 61 77 76" fill="#dbe1e801 #dde3e901 #d3d9e200 #ced5de00"/>
+    <x:face v="61 62 78 77" fill="#dde3e901 #dfe4ea01 #d8dee500 #d3d9e200"/>
+    <x:face v="62 63 79 78" fill="#dfe4ea01 #e1e6eb00 #dee3e900 #d8dee500"/>
+    <x:face v="64 65 81 80" fill="#dee3e900 #d8dee500 #d2d9e100 #dbe0e700"/>
+    <x:face v="65 66 82 81" fill="#d8dee500 #d3d9e200 #cad2db00 #d2d9e100"/>
+    <x:face v="66 67 83 82" fill="#d3d9e200 #ced5de00 #c4cdd700 #cad2db00"/>
+    <x:face v="67 68 84 83" fill="#ced5de00 #cad2dc00 #c2cbd600 #c4cdd700"/>
+    <x:face v="68 69 85 84" fill="#cad2dc00 #c9d1db00 #c2cbd600 #c2cbd600"/>
+    <x:face v="69 70 86 85" fill="#c9d1db00 #c9d1db00 #c2cbd600 #c2cbd600"/>
+    <x:face v="70 71 87 86" fill="#c9d1db00 #c9d1db00 #c2cbd600 #c2cbd600"/>
+    <x:face v="71 72 88 87" fill="#c9d1db00 #c9d1db00 #c2cbd600 #c2cbd600"/>
+    <x:face v="72 73 89 88" fill="#c9d1db00 #c9d1db00 #c2cbd600 #c2cbd600"/>
+    <x:face v="73 74 90 89" fill="#c9d1db00 #c9d1db00 #c2cbd600 #c2cbd600"/>
+    <x:face v="74 75 91 90" fill="#c9d1db00 #cad2dc00 #c2cbd600 #c2cbd600"/>
+    <x:face v="75 76 92 91" fill="#cad2dc00 #ced5de00 #c4cdd700 #c2cbd600"/>
+    <x:face v="76 77 93 92" fill="#ced5de00 #d3d9e200 #cad2db00 #c4cdd700"/>
+    <x:face v="77 78 94 93" fill="#d3d9e200 #d8dee500 #d2d9e100 #cad2db00"/>
+    <x:face v="78 79 95 94" fill="#d8dee500 #dee3e900 #dbe0e700 #d2d9e100"/>
+  </x:mesh>
+  </g>
+  <rect x="100" y="250" width="220" height="64" rx="32" fill="none" stroke="#454e5c" stroke-width="1.2" opacity="0.85"/>
+  <text x="210" y="289.2" text-anchor="middle" font-size="20" font-weight="600" fill="#1d232e">Cancel</text>
+
+  <rect x="400" y="250" width="220" height="64" rx="32" fill="#94a3b8" filter="blur(5)" opacity="0.55" transform="translate(0,5)"/>
+  <clipPath id="gel-accept"><rect x="400" y="250" width="220" height="64" rx="32"/></clipPath>
+  <g clip-path="url(#gel-accept)">
+  <!-- patch 1: the gel body -->
+  <x:mesh points="400,250 413.2,250 435.2,250 466,250 510,250 554,250 584.8,250 606.8,250 620,250 400,257.7 413.2,257.7 435.2,257.7 466,257.7 510,257.7 554,257.7 584.8,257.7 606.8,257.7 620,257.7 400,269.2 413.2,269.2 435.2,269.2 466,269.2 510,269.2 554,269.2 584.8,269.2 606.8,269.2 620,269.2 400,280.7 413.2,280.7 435.2,280.7 466,280.7 510,280.7 554,280.7 584.8,280.7 606.8,280.7 620,280.7 400,292.2 413.2,292.2 435.2,292.2 466,292.2 510,292.2 554,292.2 584.8,292.2 606.8,292.2 620,292.2 400,302.5 413.2,302.5 435.2,302.5 466,302.5 510,302.5 554,302.5 584.8,302.5 606.8,302.5 620,302.5 400,308.9 413.2,308.9 435.2,308.9 466,308.9 510,308.9 554,308.9 584.8,308.9 606.8,308.9 620,308.9 400,314 413.2,314 435.2,314 466,314 510,314 554,314 584.8,314 606.8,314 620,314">
+    <x:face v="0 1 10 9" fill="#26801d #26801d #348c29 #26801d"/>
+    <x:face v="1 2 11 10" fill="#26801d #26801d #6cbb5b #348c29"/>
+    <x:face v="2 3 12 11" fill="#26801d #26801d #7fcb6c #6cbb5b"/>
+    <x:face v="3 4 13 12" fill="#26801d #26801d #80cc6d #7fcb6c"/>
+    <x:face v="4 5 14 13" fill="#26801d #26801d #7fcb6c #80cc6d"/>
+    <x:face v="5 6 15 14" fill="#26801d #26801d #6cbb5b #7fcb6c"/>
+    <x:face v="6 7 16 15" fill="#26801d #26801d #348c29 #6cbb5b"/>
+    <x:face v="7 8 17 16" fill="#26801d #26801d #26801d #348c29"/>
+    <x:face v="9 10 19 18" fill="#26801d #348c29 #4b9f3d #26801d"/>
+    <x:face v="10 11 20 19" fill="#348c29 #6cbb5b #88d374 #4b9f3d"/>
+    <x:face v="11 12 21 20" fill="#6cbb5b #7fcb6c #88d374 #88d374"/>
+    <x:face v="12 13 22 21" fill="#7fcb6c #80cc6d #88d374 #88d374"/>
+    <x:face v="13 14 23 22" fill="#80cc6d #7fcb6c #88d374 #88d374"/>
+    <x:face v="14 15 24 23" fill="#7fcb6c #6cbb5b #88d374 #88d374"/>
+    <x:face v="15 16 25 24" fill="#6cbb5b #348c29 #4b9f3d #88d374"/>
+    <x:face v="16 17 26 25" fill="#348c29 #26801d #26801d #4b9f3d"/>
+    <x:face v="18 19 28 27" fill="#26801d #4b9f3d #4ba03e #26801d"/>
+    <x:face v="19 20 29 28" fill="#4b9f3d #88d374 #88d374 #4ba03e"/>
+    <x:face v="20 21 30 29" fill="#88d374 #88d374 #88d374 #88d374"/>
+    <x:face v="21 22 31 30" fill="#88d374 #88d374 #88d374 #88d374"/>
+    <x:face v="22 23 32 31" fill="#88d374 #88d374 #88d374 #88d374"/>
+    <x:face v="23 24 33 32" fill="#88d374 #88d374 #88d374 #88d374"/>
+    <x:face v="24 25 34 33" fill="#88d374 #4b9f3d #4ba03e #88d374"/>
+    <x:face v="25 26 35 34" fill="#4b9f3d #26801d #26801d #4ba03e"/>
+    <x:face v="27 28 37 36" fill="#26801d #4ba03e #4fa242 #298220"/>
+    <x:face v="28 29 38 37" fill="#4ba03e #88d374 #8dd57a #4fa242"/>
+    <x:face v="29 30 39 38" fill="#88d374 #88d374 #8fd67b #8dd57a"/>
+    <x:face v="30 31 40 39" fill="#88d374 #88d374 #90d67d #8fd67b"/>
+    <x:face v="31 32 41 40" fill="#88d374 #88d374 #8fd67b #90d67d"/>
+    <x:face v="32 33 42 41" fill="#88d374 #88d374 #8dd57a #8fd67b"/>
+    <x:face v="33 34 43 42" fill="#88d374 #4ba03e #4fa242 #8dd57a"/>
+    <x:face v="34 35 44 43" fill="#4ba03e #26801d #298220 #4fa242"/>
+    <x:face v="36 37 46 45" fill="#298220 #4fa242 #65ab5a #3f8f36"/>
+    <x:face v="37 38 47 46" fill="#4fa242 #8dd57a #b4e3a6 #65ab5a"/>
+    <x:face v="38 39 48 47" fill="#8dd57a #8fd67b #c6ecba #b4e3a6"/>
+    <x:face v="39 40 49 48" fill="#8fd67b #90d67d #d0efc5 #c6ecba"/>
+    <x:face v="40 41 50 49" fill="#90d67d #8fd67b #c6ecba #d0efc5"/>
+    <x:face v="41 42 51 50" fill="#8fd67b #8dd57a #b4e3a6 #c6ecba"/>
+    <x:face v="42 43 52 51" fill="#8dd57a #4fa242 #65ab5a #b4e3a6"/>
+    <x:face v="43 44 53 52" fill="#4fa242 #298220 #3f8f36 #65ab5a"/>
+    <x:face v="45 46 55 54" fill="#3f8f36 #65ab5a #589f4f #4b9642"/>
+    <x:face v="46 47 56 55" fill="#65ab5a #b4e3a6 #96ca8b #589f4f"/>
+    <x:face v="47 48 57 56" fill="#b4e3a6 #c6ecba #c1e3b7 #96ca8b"/>
+    <x:face v="48 49 58 57" fill="#c6ecba #d0efc5 #d1ecc8 #c1e3b7"/>
+    <x:face v="49 50 59 58" fill="#d0efc5 #c6ecba #c1e3b7 #d1ecc8"/>
+    <x:face v="50 51 60 59" fill="#c6ecba #b4e3a6 #96ca8b #c1e3b7"/>
+    <x:face v="51 52 61 60" fill="#b4e3a6 #65ab5a #589f4f #96ca8b"/>
+    <x:face v="52 53 62 61" fill="#65ab5a #3f8f36 #4b9642 #589f4f"/>
+    <x:face v="54 55 64 63" fill="#4b9642 #589f4f #3e8e35 #398c30"/>
+    <x:face v="55 56 65 64" fill="#589f4f #96ca8b #46933d #3e8e35"/>
+    <x:face v="56 57 66 65" fill="#96ca8b #c1e3b7 #509a47 #46933d"/>
+    <x:face v="57 58 67 66" fill="#c1e3b7 #d1ecc8 #579e4e #509a47"/>
+    <x:face v="58 59 68 67" fill="#d1ecc8 #c1e3b7 #509a47 #579e4e"/>
+    <x:face v="59 60 69 68" fill="#c1e3b7 #96ca8b #46933d #509a47"/>
+    <x:face v="60 61 70 69" fill="#96ca8b #589f4f #3e8e35 #46933d"/>
+    <x:face v="61 62 71 70" fill="#589f4f #4b9642 #398c30 #3e8e35"/>
+  </x:mesh>
+  <!-- patch 2: the gloss — a capsule 60% of the button's height, feathered -->
+  <x:mesh points="419.5,271.6 420.6,267.8 422.9,263.7 426.6,259.8 431.8,256.9 438.4,255.8 467,255.8 495.7,255.8 524.3,255.8 553,255.8 581.6,255.8 588.2,256.9 593.4,259.8 597.1,263.7 599.4,267.8 600.5,271.6 419.5,273 420.6,270.6 422.9,268.2 426.6,265.9 431.8,264.1 438.4,263.4 467,263.4 495.7,263.4 524.3,263.4 553,263.4 581.6,263.4 588.2,264.1 593.4,265.9 597.1,268.2 599.4,270.6 600.5,273 419.5,274.3 420.6,273.5 422.9,272.7 426.6,271.9 431.8,271.4 438.4,271.1 467,271.1 495.7,271.1 524.3,271.1 553,271.1 581.6,271.1 588.2,271.4 593.4,271.9 597.1,272.7 599.4,273.5 600.5,274.3 419.5,275.6 420.6,276.4 422.9,277.2 426.6,278 431.8,278.6 438.4,278.8 467,278.8 495.7,278.8 524.3,278.8 553,278.8 581.6,278.8 588.2,278.6 593.4,278 597.1,277.2 599.4,276.4 600.5,275.6 419.5,277 420.6,279.3 422.9,281.7 426.6,284 431.8,285.8 438.4,286.5 467,286.5 495.7,286.5 524.3,286.5 553,286.5 581.6,286.5 588.2,285.8 593.4,284 597.1,281.7 599.4,279.3 600.5,277 419.5,278.3 420.6,282.2 422.9,286.2 426.6,290.1 431.8,293 438.4,294.2 467,294.2 495.7,294.2 524.3,294.2 553,294.2 581.6,294.2 588.2,293 593.4,290.1 597.1,286.2 599.4,282.2 600.5,278.3">
+    <x:face v="0 1 17 16" fill="#e0f4d698 #ebf8e3ae #e3f5da83 #dbf2d173"/>
+    <x:face v="1 2 18 17" fill="#ebf8e3ae #f4fceec5 #eaf8e295 #e3f5da83"/>
+    <x:face v="2 3 19 18" fill="#f4fceec5 #f9fdf3db #effae9a5 #eaf8e295"/>
+    <x:face v="3 4 20 19" fill="#f9fdf3db #fafef5ec #f3fbedb2 #effae9a5"/>
+    <x:face v="4 5 21 20" fill="#fafef5ec #fafef5f2 #f4fceeb7 #f3fbedb2"/>
+    <x:face v="5 6 22 21" fill="#fafef5f2 #fafef5f2 #f4fceeb7 #f4fceeb7"/>
+    <x:face v="6 7 23 22" fill="#fafef5f2 #fafef5f2 #f4fceeb7 #f4fceeb7"/>
+    <x:face v="7 8 24 23" fill="#fafef5f2 #fafef5f2 #f4fceeb7 #f4fceeb7"/>
+    <x:face v="8 9 25 24" fill="#fafef5f2 #fafef5f2 #f4fceeb7 #f4fceeb7"/>
+    <x:face v="9 10 26 25" fill="#fafef5f2 #fafef5f2 #f4fceeb7 #f4fceeb7"/>
+    <x:face v="10 11 27 26" fill="#fafef5f2 #fafef5ec #f3fbedb2 #f4fceeb7"/>
+    <x:face v="11 12 28 27" fill="#fafef5ec #f9fdf3db #effae9a5 #f3fbedb2"/>
+    <x:face v="12 13 29 28" fill="#f9fdf3db #f4fceec5 #eaf8e295 #effae9a5"/>
+    <x:face v="13 14 30 29" fill="#f4fceec5 #ebf8e3ae #e3f5da83 #eaf8e295"/>
+    <x:face v="14 15 31 30" fill="#ebf8e3ae #e0f4d698 #dbf2d173 #e3f5da83"/>
+    <x:face v="16 17 33 32" fill="#dbf2d173 #e3f5da83 #d9f2cf32 #d6f1cb2c"/>
+    <x:face v="17 18 34 33" fill="#e3f5da83 #eaf8e295 #dcf3d239 #d9f2cf32"/>
+    <x:face v="18 19 35 34" fill="#eaf8e295 #effae9a5 #dff4d53f #dcf3d239"/>
+    <x:face v="19 20 36 35" fill="#effae9a5 #f3fbedb2 #e0f4d744 #dff4d53f"/>
+    <x:face v="20 21 37 36" fill="#f3fbedb2 #f4fceeb7 #e1f5d846 #e0f4d744"/>
+    <x:face v="21 22 38 37" fill="#f4fceeb7 #f4fceeb7 #e1f5d846 #e1f5d846"/>
+    <x:face v="22 23 39 38" fill="#f4fceeb7 #f4fceeb7 #e1f5d846 #e1f5d846"/>
+    <x:face v="23 24 40 39" fill="#f4fceeb7 #f4fceeb7 #e1f5d846 #e1f5d846"/>
+    <x:face v="24 25 41 40" fill="#f4fceeb7 #f4fceeb7 #e1f5d846 #e1f5d846"/>
+    <x:face v="25 26 42 41" fill="#f4fceeb7 #f4fceeb7 #e1f5d846 #e1f5d846"/>
+    <x:face v="26 27 43 42" fill="#f4fceeb7 #f3fbedb2 #e0f4d744 #e1f5d846"/>
+    <x:face v="27 28 44 43" fill="#f3fbedb2 #effae9a5 #dff4d53f #e0f4d744"/>
+    <x:face v="28 29 45 44" fill="#effae9a5 #eaf8e295 #dcf3d239 #dff4d53f"/>
+    <x:face v="29 30 46 45" fill="#eaf8e295 #e3f5da83 #d9f2cf32 #dcf3d239"/>
+    <x:face v="30 31 47 46" fill="#e3f5da83 #dbf2d173 #d6f1cb2c #d9f2cf32"/>
+    <x:face v="32 33 49 48" fill="#d6f1cb2c #d9f2cf32 #cfeec301 #d2efc600"/>
+    <x:face v="33 34 50 49" fill="#d9f2cf32 #dcf3d239 #ccedbf01 #cfeec301"/>
+    <x:face v="34 35 51 50" fill="#dcf3d239 #dff4d53f #c9ecbc01 #ccedbf01"/>
+    <x:face v="35 36 52 51" fill="#dff4d53f #e0f4d744 #c7ebb901 #c9ecbc01"/>
+    <x:face v="36 37 53 52" fill="#e0f4d744 #e1f5d846 #c6eab801 #c7ebb901"/>
+    <x:face v="37 38 54 53" fill="#e1f5d846 #e1f5d846 #c6eab801 #c6eab801"/>
+    <x:face v="38 39 55 54" fill="#e1f5d846 #e1f5d846 #c6eab801 #c6eab801"/>
+    <x:face v="39 40 56 55" fill="#e1f5d846 #e1f5d846 #c6eab801 #c6eab801"/>
+    <x:face v="40 41 57 56" fill="#e1f5d846 #e1f5d846 #c6eab801 #c6eab801"/>
+    <x:face v="41 42 58 57" fill="#e1f5d846 #e1f5d846 #c6eab801 #c6eab801"/>
+    <x:face v="42 43 59 58" fill="#e1f5d846 #e0f4d744 #c7ebb901 #c6eab801"/>
+    <x:face v="43 44 60 59" fill="#e0f4d744 #dff4d53f #c9ecbc01 #c7ebb901"/>
+    <x:face v="44 45 61 60" fill="#dff4d53f #dcf3d239 #ccedbf01 #c9ecbc01"/>
+    <x:face v="45 46 62 61" fill="#dcf3d239 #d9f2cf32 #cfeec301 #ccedbf01"/>
+    <x:face v="46 47 63 62" fill="#d9f2cf32 #d6f1cb2c #d2efc600 #cfeec301"/>
+    <x:face v="48 49 65 64" fill="#d2efc600 #cfeec301 #c5eab600 #cdedc000"/>
+    <x:face v="49 50 66 65" fill="#cfeec301 #ccedbf01 #bce7ac00 #c5eab600"/>
+    <x:face v="50 51 67 66" fill="#ccedbf01 #c9ecbc01 #b5e4a400 #bce7ac00"/>
+    <x:face v="51 52 68 67" fill="#c9ecbc01 #c7ebb901 #b0e29e00 #b5e4a400"/>
+    <x:face v="52 53 69 68" fill="#c7ebb901 #c6eab801 #aee19c00 #b0e29e00"/>
+    <x:face v="53 54 70 69" fill="#c6eab801 #c6eab801 #aee19c00 #aee19c00"/>
+    <x:face v="54 55 71 70" fill="#c6eab801 #c6eab801 #aee19c00 #aee19c00"/>
+    <x:face v="55 56 72 71" fill="#c6eab801 #c6eab801 #aee19c00 #aee19c00"/>
+    <x:face v="56 57 73 72" fill="#c6eab801 #c6eab801 #aee19c00 #aee19c00"/>
+    <x:face v="57 58 74 73" fill="#c6eab801 #c6eab801 #aee19c00 #aee19c00"/>
+    <x:face v="58 59 75 74" fill="#c6eab801 #c7ebb901 #b0e29e00 #aee19c00"/>
+    <x:face v="59 60 76 75" fill="#c7ebb901 #c9ecbc01 #b5e4a400 #b0e29e00"/>
+    <x:face v="60 61 77 76" fill="#c9ecbc01 #ccedbf01 #bce7ac00 #b5e4a400"/>
+    <x:face v="61 62 78 77" fill="#ccedbf01 #cfeec301 #c5eab600 #bce7ac00"/>
+    <x:face v="62 63 79 78" fill="#cfeec301 #d2efc600 #cdedc000 #c5eab600"/>
+    <x:face v="64 65 81 80" fill="#cdedc000 #c5eab600 #bbe6ab00 #c8ebbb00"/>
+    <x:face v="65 66 82 81" fill="#c5eab600 #bce7ac00 #aee19c00 #bbe6ab00"/>
+    <x:face v="66 67 83 82" fill="#bce7ac00 #b5e4a400 #a6de9300 #aee19c00"/>
+    <x:face v="67 68 84 83" fill="#b5e4a400 #b0e29e00 #a3dd8f00 #a6de9300"/>
+    <x:face v="68 69 85 84" fill="#b0e29e00 #aee19c00 #a3dd8f00 #a3dd8f00"/>
+    <x:face v="69 70 86 85" fill="#aee19c00 #aee19c00 #a3dd8f00 #a3dd8f00"/>
+    <x:face v="70 71 87 86" fill="#aee19c00 #aee19c00 #a3dd8f00 #a3dd8f00"/>
+    <x:face v="71 72 88 87" fill="#aee19c00 #aee19c00 #a3dd8f00 #a3dd8f00"/>
+    <x:face v="72 73 89 88" fill="#aee19c00 #aee19c00 #a3dd8f00 #a3dd8f00"/>
+    <x:face v="73 74 90 89" fill="#aee19c00 #aee19c00 #a3dd8f00 #a3dd8f00"/>
+    <x:face v="74 75 91 90" fill="#aee19c00 #b0e29e00 #a3dd8f00 #a3dd8f00"/>
+    <x:face v="75 76 92 91" fill="#b0e29e00 #b5e4a400 #a6de9300 #a3dd8f00"/>
+    <x:face v="76 77 93 92" fill="#b5e4a400 #bce7ac00 #aee19c00 #a6de9300"/>
+    <x:face v="77 78 94 93" fill="#bce7ac00 #c5eab600 #bbe6ab00 #aee19c00"/>
+    <x:face v="78 79 95 94" fill="#c5eab600 #cdedc000 #c8ebbb00 #bbe6ab00"/>
+  </x:mesh>
+  </g>
+  <rect x="400" y="250" width="220" height="64" rx="32" fill="none" stroke="#26801d" stroke-width="1.2" opacity="0.85"/>
+  <text x="510" y="289.2" text-anchor="middle" font-size="20" font-weight="600" fill="#124a0e">Accept</text>
+</svg>

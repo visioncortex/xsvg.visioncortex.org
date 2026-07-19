@@ -1,0 +1,47 @@
+/* xsvg docs theme. Indigo brand to match the compiler's own sample palette. */
+
+:root {
+  --ifm-color-primary: #4f46e5;
+  --ifm-color-primary-dark: #3f37cc;
+  --ifm-color-primary-darker: #3b34c0;
+  --ifm-color-primary-darkest: #302a9e;
+  --ifm-color-primary-light: #635bea;
+  --ifm-color-primary-lighter: #6f67eb;
+  --ifm-color-primary-lightest: #8f89ef;
+  --ifm-code-font-size: 92%;
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
+  --ifm-color-section-alt: #f7f8fb;
+}
+
+html[data-theme='dark'] {
+  --ifm-color-primary: #8b85f0;
+  --ifm-color-primary-dark: #6f67eb;
+  --ifm-color-primary-darker: #635bea;
+  --ifm-color-primary-darkest: #4f46e5;
+  --ifm-color-primary-light: #a7a3f4;
+  --ifm-color-primary-lighter: #b3aff5;
+  --ifm-color-primary-lightest: #d3d1fa;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --ifm-color-section-alt: #1a1d23;
+}
+
+.home-section {
+  padding: 3.5rem 0;
+}
+.home-section-alt {
+  background-color: var(--ifm-color-section-alt);
+}
+
+/* Give wide example iframes and tables room on large screens. */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+/* xsvg reads as lowercase everywhere — don't let headings title-case it. */
+.navbar__title,
+.footer__title {
+  text-transform: none;
+}

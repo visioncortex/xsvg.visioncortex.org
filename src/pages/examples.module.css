@@ -1,0 +1,77 @@
+.header {
+  margin-bottom: 2rem;
+}
+.header h1 {
+  font-size: 2.5rem;
+}
+.section {
+  margin-bottom: 3rem;
+}
+.sectionTitle {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.sectionNote {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.card {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--ifm-background-surface-color);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
+}
+.thumbLink {
+  display: block;
+  position: relative;
+}
+.thumb {
+  display: block;
+  width: 100%;
+  height: 190px;
+  border: 0;
+  background: #f8fafc;
+  pointer-events: none;
+}
+html[data-theme='dark'] .thumb {
+  background: #0b0f16;
+}
+.cardBody {
+  padding: 12px 14px 14px;
+}
+.cardTitle {
+  font-size: 1.05rem;
+  margin: 0 0 0.35rem;
+}
+.cardBlurb {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cardLinks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+.cardLinks a {
+  font-weight: 600;
+}
