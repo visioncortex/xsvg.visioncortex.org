@@ -46,6 +46,23 @@
   text-decoration: underline;
 }
 
+/* Dark mode — the bare viewer page still gets html[data-theme] from Docusaurus's
+   global color-mode script, so the top-bar chrome can match. */
+html[data-theme='dark'] .topbar {
+  background: rgba(17, 24, 39, 0.92);
+  border-bottom-color: #1f2937;
+}
+html[data-theme='dark'] .brand,
+html[data-theme='dark'] .link {
+  color: #8b85f0;
+}
+html[data-theme='dark'] .sub {
+  color: #94a3b8;
+}
+html[data-theme='dark'] .docName {
+  color: #e5e7eb;
+}
+
 .stage {
   flex: 1 1 auto;
   min-height: 0;
