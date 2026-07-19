@@ -11,7 +11,7 @@ shaped on a flat baseline, then either lowered to SVG's own `<textPath>` (live, 
 The `effect` attribute picks which — text on a path is a specialization of the geometry-transform
 pipeline, and each effect is just a different **field** applied to the outlined run.
 
-<Example file="textpath" height={420} title="Text on a path" caption="skew shears upright glyphs onto a wave; rainbow rotates and bends them along an arc, with baseline-shift floating a second run off the same path." />
+<Example file="textpath" title="Text on a path" caption="skew shears upright glyphs onto a wave; rainbow rotates and bends them along an arc, with baseline-shift floating a second run off the same path." />
 
 ## Syntax
 

@@ -10,7 +10,7 @@ Google Drawings has and SVG lacks. It resolves each endpoint to its **bounding b
 route between the two edges, and lowers to a plain `<path>` carrying the connector's own stroke.
 Because it references its endpoints, moving or resizing a box **re-derives** the line.
 
-<Example file="connectors" height={360} title="Four connector routes" caption="straight (edge-clipped), x-major and y-major orthogonal rails, and a curve — with end and both arrowheads tinted to each stroke." />
+<Example file="connectors" title="Four connector routes" caption="straight (edge-clipped), x-major and y-major orthogonal rails, and a curve — with end and both arrowheads tinted to each stroke." />
 
 ## Syntax
 

@@ -10,7 +10,7 @@ line of a paragraph ragged in the normal typographic convention. It is available
 front-ends: `<textArea>` via `text-align="justify"` and `<x:textbox>` via `align="justify"`. The
 `justify` value extends the SVG Tiny 1.2 vocabulary with the CSS/SVG 2 value (spec §6.9).
 
-<Example file="justify" height={400} title="start vs justify, and justify across a break" caption="The same paragraph ragged (left) and justified (right); below, justify with a <tbreak/> — every line but each paragraph's last is stretched." />
+<Example file="justify" title="start vs justify, and justify across a break" caption="The same paragraph ragged (left) and justified (right); below, justify with a <tbreak/> — every line but each paragraph's last is stretched." />
 
 ## Syntax
 

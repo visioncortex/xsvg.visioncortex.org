@@ -12,9 +12,9 @@ specified a `<meshgradient>` element, but every browser dropped it; xsvg keeps t
 lowers it to a **tiny texel-aligned PNG** that the renderer's own bilinear image filter
 reconstructs, so the result draws in any SVG engine.
 
-<Example file="mesh" height={420} title="Mesh gradients: quads, triangles, cracks, and grid sugar" caption="Smooth two-quad region, the four-corner bilinear twist, a crack from disagreeing edge colors, a barycentric triangle fan, grid-sugar, and an Inkscape/SVG2 meshgradient." />
+<Example file="mesh" height={680} title="Mesh gradients: quads, triangles, cracks, and grid sugar" caption="Smooth two-quad region, the four-corner bilinear twist, a crack from disagreeing edge colors, a barycentric triangle fan, grid-sugar, and an Inkscape/SVG2 meshgradient." />
 
-<Example file="aqua" height={340} title="Aqua gel buttons" caption="Each button is two meshes: an opaque gel body plus a feathered gloss overlay whose shape is its own capsule mesh — shine from per-vertex alpha." />
+<Example file="aqua" title="Aqua gel buttons" caption="Each button is two meshes: an opaque gel body plus a feathered gloss overlay whose shape is its own capsule mesh — shine from per-vertex alpha." />
 
 ## Syntax
 

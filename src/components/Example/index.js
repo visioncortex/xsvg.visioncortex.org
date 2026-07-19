@@ -33,7 +33,7 @@ function toBase64(s) {
 export default function Example({
   file,
   src,
-  height = 320,
+  height = 560, // max height (px) — the box otherwise sizes to the document's aspect ratio
   title,
   caption,
   showSource = true,
@@ -55,29 +55,44 @@ export default function Example({
 
   const [open, setOpen] = useState(false);
   const [fetched, setFetched] = useState(src || null);
+  const [aspect, setAspect] = useState(null); // "W / H" from the document's viewBox
 
-  // For file-based examples, lazily fetch the source so the code shown is the real,
-  // compiled document (never drifts from the iframe).
+  // Fetch the source once on mount: it drives both the collapsible "View source"
+  // block and the box's aspect ratio (so the example sizes to the document, not a
+  // fixed height). Inline `src` is parsed directly, no fetch.
   useEffect(() => {
-    if (!showSource || src || !file || fetched || !open) return;
     let cancelled = false;
+    const applyAspect = (t) => {
+      const m = t && t.match(/viewBox\s*=\s*["']\s*[-\d.]+\s+[-\d.]+\s+([\d.]+)\s+([\d.]+)/);
+      if (m && Number(m[1]) > 0 && Number(m[2]) > 0 && !cancelled) setAspect(`${m[1]} / ${m[2]}`);
+    };
+    if (src) {
+      applyAspect(src);
+      return undefined;
+    }
+    if (!file) return undefined;
     const name = file.endsWith('.xsvg') ? file : `${file}.xsvg`;
     fetch(`${datasetBase}${name}`)
       .then((r) => (r.ok ? r.text() : Promise.reject(new Error(name))))
       .then((t) => {
-        if (!cancelled) setFetched(t);
+        if (cancelled) return;
+        setFetched(t);
+        applyAspect(t);
       })
       .catch(() => {});
     return () => {
       cancelled = true;
     };
-  }, [showSource, src, file, fetched, open, datasetBase]);
+  }, [src, file, datasetBase]);
 
   const canShowSource = showSource && (src || file);
+  // Size to the document's aspect ratio, capped at `height`; fall back to a fixed
+  // height until the viewBox is known.
+  const frameStyle = aspect ? { aspectRatio: aspect, maxHeight: height } : { height };
 
   return (
     <figure className={styles.example}>
-      <div className={styles.frameWrap} style={{ height }}>
+      <div className={styles.frameWrap} style={frameStyle}>
         <BrowserOnly fallback={<div className={styles.embedLoading}>Compiling…</div>}>
           {() => {
             // The lib's React embed — compiles xsvg → plain SVG inline, no iframe.

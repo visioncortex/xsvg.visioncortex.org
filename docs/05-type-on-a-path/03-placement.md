@@ -9,7 +9,7 @@ Once an `effect` decides how glyphs sit on the curve, `align` and `start` decide
 path the run begins. This page covers both, plus `effect="stair"` — the authorable stepped baseline
 that stays live `<text>`.
 
-<Example file="textpath-align" height={420} title="align, start, and stair" caption="align distributes the run's slack within the path's extent; start adds an arc-length head-start; the stair effect steps live glyphs." />
+<Example file="textpath-align" title="align, start, and stair" caption="align distributes the run's slack within the path's extent; start adds an arc-length head-start; the stair effect steps live glyphs." />
 
 ## align
 

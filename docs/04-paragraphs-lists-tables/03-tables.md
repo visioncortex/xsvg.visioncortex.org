@@ -11,7 +11,7 @@ HTML's auto-layout: **column widths are author-set, row heights grow to fit cont
 its text to its column width and the tallest cell sets the row's height. It bakes to plain `<rect>`s
 (cell backgrounds and grid) plus positioned `<text>` — no live table needed.
 
-<Example file="table" height={380} title="A content-driven table" caption="A fixed label column plus two flex columns; long cells wrap and grow their row, with header-fill, zebra stripes, and a per-cell background override." />
+<Example file="table" title="A content-driven table" caption="A fixed label column plus two flex columns; long cells wrap and grow their row, with header-fill, zebra stripes, and a per-cell background override." />
 
 ## Syntax
 

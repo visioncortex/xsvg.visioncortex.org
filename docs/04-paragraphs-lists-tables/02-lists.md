@@ -10,7 +10,7 @@ but with a **hanging indent**: the marker sits in the gutter and continuation li
 column, not back under the marker. It is the ordered/unordered list SVG never got, and lowers to a
 `<g>` of drawn bullet shapes plus one plain `<text>` of positioned `<tspan>`s — live and selectable.
 
-<Example file="lists" height={420} title="Bullet and numbered lists" caption="Bullets that cycle by depth, decimal→alpha→roman numbering with a resuming outer counter, and a list flowed inside a referenced card." />
+<Example file="lists" title="Bullet and numbered lists" caption="Bullets that cycle by depth, decimal→alpha→roman numbering with a resuming outer counter, and a list flowed inside a referenced card." />
 
 ## Syntax
 

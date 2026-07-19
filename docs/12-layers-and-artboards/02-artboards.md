@@ -7,7 +7,7 @@ description: "Name slide frames with a plain group; tools page through them, whi
 
 An artboard is a `<g x:artboard="Label">` — a named region, like an Illustrator artboard or a slide. It is degradation-safe the same way as [layers](/docs/layers-and-artboards/layers/): it compiles to a plain `<g>` that renders normally in any viewer, carrying `data-xsvg-artboard="Label"` so tools can enumerate, frame, and page through the frames.
 
-<Example file="artboards" height={420} title="A ten-slide deck in one file" caption="Each slide is a <g x:artboard> with an explicit x:frame; in a plain viewer they tile as a grid, while the preview pages through them." />
+<Example file="artboards" title="A ten-slide deck in one file" caption="Each slide is a <g x:artboard> with an explicit x:frame; in a plain viewer they tile as a grid, while the preview pages through them." />
 
 ## Syntax
 

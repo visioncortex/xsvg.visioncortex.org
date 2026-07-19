@@ -9,7 +9,7 @@ Wrapping is the base win: text that reflows to a width instead of running off th
 two rungs — one attribute on a plain `<text>`, or the SVG Tiny 1.2 `<textArea>` element. Both use the
 same greedy, break-on-whitespace line breaker (spec §6.1).
 
-<Example file="textarea" height={230} title="textArea flowed text" caption="A textArea wraps to its width and flows top-down; text-align and display-align place it within the region." />
+<Example file="textarea" title="textArea flowed text" caption="A textArea wraps to its width and flows top-down; text-align and display-align place it within the region." />
 
 ## Rung 1 — `<text inline-size>`
 
@@ -62,7 +62,7 @@ line spacing, and forced breaks.
 
 ### Sizing and line spacing
 
-<Example file="textarea-sizing" height={400} title="Auto width, clipping height, and line-increment" caption="width=auto never wraps; a short height clips overflow lines; line-increment tunes the line-box height." />
+<Example file="textarea-sizing" title="Auto width, clipping height, and line-increment" caption="width=auto never wraps; a short height clips overflow lines; line-increment tunes the line-box height." />
 
 - **`width:auto`** — no wrap; the text stays on one line (each `<tbreak/>` still starts a new one).
 - **`height:auto`** — the region grows to hold every line; nothing is clipped.

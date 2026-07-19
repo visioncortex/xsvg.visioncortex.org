@@ -10,7 +10,7 @@ shorten toward a triangle's apex, bulge across a circle's middle, taper into a d
 is region flow: the "fit text in polygon" case SVG never had (spec §6.10). A `rect` target keeps the
 plain rectangular box model; any other fillable shape flows inside the actual filled outline.
 
-<Example file="region-flow" height={280} title="Text poured into outlines" caption="The same feature flows text inside a triangle, a circle, a diamond and an hourglass — each line wrapped to the shape's inside width at that height." />
+<Example file="region-flow" title="Text poured into outlines" caption="The same feature flows text inside a triangle, a circle, a diamond and an hourglass — each line wrapped to the shape's inside width at that height." />
 
 ## Syntax
 

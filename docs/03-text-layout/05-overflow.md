@@ -10,7 +10,7 @@ silently (`clip`) or mark the cut with an ellipsis (`ellipsis`). One property co
 overflow — too many lines (block) and a line too wide (inline) — and it works on box-bound text:
 `<textArea>` and `<x:textbox>`, not point text or `inline-size` flow (spec §6.6).
 
-<Example file="textarea-ellipsis" height={230} title="clip vs ellipsis" caption="clip drops trailing lines with no marker; ellipsis marks a block cut on the last visible line and trims an over-wide word inline." />
+<Example file="textarea-ellipsis" title="clip vs ellipsis" caption="clip drops trailing lines with no marker; ellipsis marks a block cut on the last visible line and trims an over-wide word inline." />
 
 ## Attributes
 

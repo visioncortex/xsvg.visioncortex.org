@@ -9,6 +9,7 @@
 .frameWrap {
   position: relative;
   width: 100%;
+  min-height: 180px;
   background-color: #f8fafc;
   background-image:
     linear-gradient(45deg, #eef2f7 25%, transparent 25%),

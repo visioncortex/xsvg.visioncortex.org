@@ -7,7 +7,7 @@ description: "A linear data coordinate frame — map a data domain onto a pixel 
 
 `<x:plot>` is a **linear data coordinate frame** — the cartesian counterpart to a [pie](/docs/charts/pie/). It maps a data domain onto a pixel box (y inverted, so larger values sit higher) and **keeps stroke and marker sizes in pixels**, unlike a `<g transform>` that would stretch a 2px line into a slab. You express marks in *data* units; the compiler bakes them to plain shapes. It is a coordinate system, not a charting library.
 
-<Example file="plot" height={320} title="Bars and a line graph" caption="Two plots: bottom-aligned bars over a 0–100 domain, and a line with dot markers and an area fill over a 20–25 domain." />
+<Example file="plot" title="Bars and a line graph" caption="Two plots: bottom-aligned bars over a 0–100 domain, and a line with dot markers and an area fill over a 20–25 domain." />
 
 ## Syntax
 

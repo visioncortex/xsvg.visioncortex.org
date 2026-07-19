@@ -10,7 +10,7 @@ region by a **Minkowski offset** — the "Offset Path" (Illustrator) / "Inset & 
 operation SVG never got. It is a **baked reference**: `in` resolves to the target's compiled geometry,
 so editing the target re-emits the offset. It lowers to one plain `<path>`.
 
-<Example file="offset" height={420} title="Inset & outset" caption="Concentric ripples around a blob, a self-intersecting pentagram outset, a spiky star inset and outset, and stacked offsets as a sticker halo behind outlined text." />
+<Example file="offset" title="Inset & outset" caption="Concentric ripples around a blob, a self-intersecting pentagram outset, a spiky star inset and outset, and stacked offsets as a sticker halo behind outlined text." />
 
 ## Syntax
 

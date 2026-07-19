@@ -9,7 +9,7 @@ The `effect` attribute on `<x:textpath>` picks the **field** that places the run
 curve. One choice — `follow` — stays native live SVG; the rest are geometry transforms of the outlined
 run. This page details each, and when a run outlines its glyphs versus staying native `<text>`.
 
-<Example file="textpath-effects" height={340} title="skew vs ribbon vs follow" caption="skew keeps verticals upright; ribbon tilts them perpendicular to the path; follow is SVG's own textPath — live and selectable." />
+<Example file="textpath-effects" title="skew vs ribbon vs follow" caption="skew keeps verticals upright; ribbon tilts them perpendicular to the path; follow is SVG's own textPath — live and selectable." />
 
 ## follow — native `<textPath>`
 

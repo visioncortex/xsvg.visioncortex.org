@@ -7,7 +7,7 @@ description: "Write standard CSS filter functions on the filter attribute; the c
 
 You write the **standard `filter` attribute with CSS function syntax** — the form browsers already render live, so an uncompiled document degrades perfectly — and the compiler lowers it to an equivalent **`<filter>` element graph**, so the static SVG subset gets the same pixels. xsvg also adds `-x-curve()` Photoshop-style tone curves sampled into lookup tables.
 
-<Example file="adjust" height={420} title="Pixel adjustments" caption="One artwork stamped with filter='…' — brightness, contrast, saturate, sepia, hue-rotate, invert, plus -x-curve tone curves and -x-levels." />
+<Example file="adjust" title="Pixel adjustments" caption="One artwork stamped with filter='…' — brightness, contrast, saturate, sepia, hue-rotate, invert, plus -x-curve tone curves and -x-levels." />
 
 ## Syntax
 

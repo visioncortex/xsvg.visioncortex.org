@@ -10,7 +10,7 @@ description: "The x:textbox element — box text with padding, horizontal and ve
 box actually needs — `padding`, `align`/`valign` keywords, [shrink-to-fit](/docs/text-layout/shrink-to-fit/), and
 binding to a referenced shape.
 
-<Example file="alignment" height={400} title="align × valign" caption="Every combination of align (start/center/end) and valign (top/middle/bottom) in a fixed box." />
+<Example file="alignment" title="align × valign" caption="Every combination of align (start/center/end) and valign (top/middle/bottom) in a fixed box." />
 
 ## Syntax
 
@@ -65,7 +65,7 @@ here, `line-increment` there) and keyword (`valign` here, `display-align` there)
 
 ## A worked example — reusing one shape
 
-<Example file="chat" height={380} title="Chat bubbles from two textboxes each" caption="Each bubble binds two <x:textbox> elements to the same rect — the message (top-start) and the timestamp (bottom-end)." />
+<Example file="chat" title="Chat bubbles from two textboxes each" caption="Each bubble binds two <x:textbox> elements to the same rect — the message (top-start) and the timestamp (bottom-end)." />
 
 Because a textbox can bind to a shape and align within it, two textboxes can share one bubble: the
 message flows from the top-start and a small timestamp sits `align="end" valign="bottom"` in the same

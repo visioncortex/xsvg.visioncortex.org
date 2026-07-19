@@ -9,7 +9,7 @@ Three controls tune the horizontal rhythm of text. `letter-spacing` and `word-sp
 that the layout counts (tracking that affects wrapping). `glyph-x-scale` stretches or condenses the
 rendered glyphs without touching the layout. And `<tbreak/>` forces a line break where you author it.
 
-<Example file="letter-spacing" height={330} title="letter-spacing (tracking)" caption="Increasing tracking on a word; kerning pairs survive; and tracked text wraps sooner in the same box because the layout counts the space." />
+<Example file="letter-spacing" title="letter-spacing (tracking)" caption="Increasing tracking on a word; kerning pairs survive; and tracked text wraps sooner in the same box because the layout counts the space." />
 
 ## `letter-spacing` and `word-spacing`
 
@@ -41,7 +41,7 @@ ellipsis truncation and alignment, so tracked text breaks and fits correctly. Th
 emitted on the output `<text>` so the renderer reproduces the exact width the layout assumed. `normal`
 and `0` emit nothing. Counts use code points in v0.
 
-<Example file="word-spacing" height={330} title="word-spacing" caption="Wider inter-word gaps, and the same box wrapping sooner because the layout accounts for the added word space." />
+<Example file="word-spacing" title="word-spacing" caption="Wider inter-word gaps, and the same box wrapping sooner because the layout accounts for the added word space." />
 
 ## `glyph-x-scale` — visual width scaling
 
@@ -61,7 +61,7 @@ both the glyphs and their spacing to hit that length. A value of `1` (the initia
 combined with `letter-spacing`, the `textLength` target is computed from the letter-spaced advance, so
 the two compose.
 
-<Example file="tbreak-and-glyph-scale" height={340} title="Forced breaks and glyph-x-scale" caption="Forced breaks in an address block, three glyph-x-scale widths, and a stretched hand-broken banner." />
+<Example file="tbreak-and-glyph-scale" title="Forced breaks and glyph-x-scale" caption="Forced breaks in an address block, three glyph-x-scale widths, and a stretched hand-broken banner." />
 
 ## `<tbreak/>`
 

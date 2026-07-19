@@ -8,7 +8,7 @@ description: "Write a small xsvg document, understand its structure, and compile
 An xsvg document is an SVG document with the extension namespace declared. Here's a complete one that
 uses a single extension — a box-bound label that wraps, centers, and shrinks to fit:
 
-<Example height={220} title="A box-bound label" src={`<svg viewBox="0 0 320 160" xmlns:x="https://xsvg.visioncortex.org">
+<Example title="A box-bound label" src={`<svg viewBox="0 0 320 160" xmlns:x="https://xsvg.visioncortex.org">
   <rect id="card" x="20" y="20" width="280" height="120" rx="16"
         fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
   <x:textbox in="#card" padding="16" align="center" valign="middle" fit="shrink"

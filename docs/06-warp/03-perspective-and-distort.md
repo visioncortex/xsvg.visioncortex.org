@@ -10,7 +10,7 @@ by a `bend` amount. `field="perspective"` solves a true projective map; `field="
 bilinear blend. Both take a `corners` attribute; neither can be expressed by SVG's affine `transform`,
 so xsvg bakes them into `<path>` geometry.
 
-<Example file="warp-perspective" height={360} title="Perspective, free distort & the distortion sliders" caption="corners = TL TR BR BL; distort-h / distort-v compose a taper after a preset." />
+<Example file="warp-perspective" title="Perspective, free distort & the distortion sliders" caption="corners = TL TR BR BL; distort-h / distort-v compose a taper after a preset." />
 
 ## Syntax
 

@@ -10,7 +10,7 @@ description: "The outline=\"true\" attribute lowers a text element's glyphs to p
 transform applied *after* wrapping, fitting, and alignment have run. The drawing then carries the true
 display face as geometry and renders identically anywhere, with no font install or `@font-face` embed.
 
-<Example file="outline" height={260} title="Outlined glyphs land on the live text" caption="One box drawn twice at identical geometry: live <text> fill, plus an outline='true' keyline on top." />
+<Example file="outline" title="Outlined glyphs land on the live text" caption="One box drawn twice at identical geometry: live <text> fill, plus an outline='true' keyline on top." />
 
 ## Syntax
 

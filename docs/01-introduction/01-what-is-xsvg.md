@@ -14,7 +14,7 @@ shrink-to-fit, flow into any shape), envelope warps, boolean path algebra, offse
 connectors, gradient meshes, and a data-coordinate frame for charts. Every one of them **lowers to
 primitives SVG already renders**: `<path>`, `<text>`, `<image>`, gradients.
 
-<Example file="badges.xsvg" height={300} title="One document, many extensions" caption="Curved rim text, a warp-arched title, and a mesh-gradient medal — all compiled to plain SVG. Open the source to see the x: tags." />
+<Example file="badges.xsvg" title="One document, many extensions" caption="Curved rim text, a warp-arched title, and a mesh-gradient medal — all compiled to plain SVG. Open the source to see the x: tags." />
 
 ## A superset, not a new format
 

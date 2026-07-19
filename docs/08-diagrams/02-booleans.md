@@ -10,9 +10,9 @@ intersect, and exclude. The children stay editable in the source; the compiler f
 combined region and emits it as a single plain `<path>`. Any operand that can become a filled shape —
 a basic shape, outlined text, or another `x:` element — participates.
 
-<Example file="boolean" height={420} title="The four boolean operations" caption="union (one silhouette), subtract (text punched from a plate), intersect (the overlap lens), exclude (overlap becomes a hole), and a boolean composed inside a warp." />
+<Example file="boolean" title="The four boolean operations" caption="union (one silhouette), subtract (text punched from a plate), intersect (the overlap lens), exclude (overlap becomes a hole), and a boolean composed inside a warp." />
 
-<Example file="boolean-refs" height={420} title="Operands by reference" caption="A venn lens derived from circles that still draw themselves; one motif stamped at several <use> offsets and fused; a union reused as an operand; live text punched by reference." />
+<Example file="boolean-refs" title="Operands by reference" caption="A venn lens derived from circles that still draw themselves; one motif stamped at several <use> offsets and fused; a union reused as an operand; live text punched by reference." />
 
 ## Syntax
 

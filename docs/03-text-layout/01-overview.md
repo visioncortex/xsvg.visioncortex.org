@@ -12,7 +12,7 @@ SVG's own text, so the same words wrap, fit and align instead of overflowing.
 You adopt it one rung at a time. Each rung does more and costs a little more markup, and each
 degrades predictably in a plain SVG viewer (see [graceful degradation](/docs/introduction/graceful-degradation/)).
 
-<Example file="wrap-vs-overflow" height={240} title="Overflow, then two fixes" caption="Plain SVG text spills out of its box (left); inline-size wraps it (middle); x:textbox wraps, centers and shrinks it to fit (right)." />
+<Example file="wrap-vs-overflow" title="Overflow, then two fixes" caption="Plain SVG text spills out of its box (left); inline-size wraps it (middle); x:textbox wraps, centers and shrinks it to fit (right)." />
 
 ## The progressive-adoption ladder
 

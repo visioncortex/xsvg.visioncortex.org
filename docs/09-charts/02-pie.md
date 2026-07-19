@@ -7,7 +7,7 @@ description: "A radial chart coordinate primitive — value sets each slice's an
 
 `<x:pie>` is a **chart coordinate primitive**, not a charting library: it maps values to sectors so you draw the marks, and it bakes to plain `<path>`s. A pie is a ring of `<x:slice>` children, each with **three independent channels** — angle, radius, and radial offset — which is what lets one primitive express a pie, a donut, an emphasized slice, and a polar-area (Nightingale rose).
 
-<Example file="pie" height={360} title="Pie, donut & polar-area" caption="One primitive, three charts: a pie with one slice grown and exploded, a donut carved by inner-radius, and a polar-area rose with equal angles and per-slice radius." />
+<Example file="pie" title="Pie, donut & polar-area" caption="One primitive, three charts: a pie with one slice grown and exploded, a donut carved by inner-radius, and a polar-area rose with equal angles and per-slice radius." />
 
 ## Syntax
 

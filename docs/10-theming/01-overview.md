@@ -7,7 +7,7 @@ description: "Declare a color palette and type scale once as tokens, reference t
 
 `<x:theme>` declares a document's **design tokens** — the brand palette and type scale a whole document is built around — resolved at **compile time** so the output is plain SVG with no variables left to resolve live. Change a token and the whole document restyles; an uncompiled viewer degrades cleanly, since `<x:theme>` compiles to nothing and every reference already carries a literal fallback or resolves away.
 
-<Example file="theme" height={420} title="Themed by tokens" caption="Colors reference var(name) and text pulls x:font tokens from one shared type scale — edit a token in x:theme and the whole document restyles." />
+<Example file="theme" title="Themed by tokens" caption="Colors reference var(name) and text pulls x:font tokens from one shared type scale — edit a token in x:theme and the whole document restyles." />
 
 ## Syntax
 

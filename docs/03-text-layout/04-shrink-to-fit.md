@@ -10,7 +10,7 @@ Shrink-to-fit sizes the type to the box instead of the box to the type. Set `fit
 size until the whole wrapped paragraph fits — down to a legibility floor (spec §6.1, §6.4). It is the
 key to equal-sized cards, buttons and labels holding text of different lengths.
 
-<Example file="cards" height={230} title="Cards that stay equal" caption="Three identical boxes; each description shrinks to fit, so the cards line up regardless of text length." />
+<Example file="cards" title="Cards that stay equal" caption="Three identical boxes; each description shrinks to fit, so the cards line up regardless of text length." />
 
 ## Syntax
 

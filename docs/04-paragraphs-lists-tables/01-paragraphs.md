@@ -11,7 +11,7 @@ one endless run. Each paragraph wraps to the content width and carries its own a
 style, and spacing. It lowers to one live `<text>` per paragraph, so the output stays selectable
 plain SVG.
 
-<Example file="paragraphs" height={380} title="Paragraphs in a textbox" caption="A heading, a first-line-indented body paragraph, and a justified one — plus a vertically centered pull-quote column." />
+<Example file="paragraphs" title="Paragraphs in a textbox" caption="A heading, a first-line-indented body paragraph, and a justified one — plus a vertically centered pull-quote column." />
 
 ## Syntax
 

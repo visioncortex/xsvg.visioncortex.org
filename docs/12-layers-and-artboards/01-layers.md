@@ -7,7 +7,7 @@ description: "Compile-time z-order via x: attributes on a plain group — restac
 
 SVG has no layers, only document order. xsvg adds **compile-time restacking** the degradation-safe way — as `x:`-prefixed attributes on a plain `<g>`, exactly the shape of Inkscape's `inkscape:groupmode="layer"`. A layered file is **valid SVG that renders in any plain viewer** (in document order); the compiler reorders the groups and strips the metadata.
 
-<Example file="layers" height={280} title="Compile-time layers" caption="Authored order is watermark, card, grid, badge — but x:layer restacks the compiled paint order to grid (background), card, badge, watermark (foreground)." />
+<Example file="layers" title="Compile-time layers" caption="Authored order is watermark, card, grid, badge — but x:layer restacks the compiled paint order to grid (background), card, badge, watermark (foreground)." />
 
 ## Syntax
 

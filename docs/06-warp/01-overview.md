@@ -10,7 +10,7 @@ non-destructively. SVG's `transform` is affine-only, so perspective and envelope
 ride on vector geometry — instead xsvg **bakes** the field into deformed `<path>`s at compile time.
 The children stay editable in the source; the output is exact static SVG.
 
-<Example file="warp-presets" height={420} title="Envelope presets baked to plain paths" caption="Eight Make-with-Warp presets applied to a rect + outlined text; the dashed box is the unwarped source." />
+<Example file="warp-presets" height={760} title="Envelope presets baked to plain paths" caption="Eight Make-with-Warp presets applied to a rect + outlined text; the dashed box is the unwarped source." />
 
 ## Syntax
 

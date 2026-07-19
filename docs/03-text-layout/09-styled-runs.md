@@ -10,7 +10,7 @@ surrounding paragraph's flow but overrides its paint or style. Bold a word, colo
 a phrase — the runs still wrap together as one paragraph (spec §6.11). This reuses SVG's own inline
 `<tspan>` — the same element the compiler emits, now also read on input.
 
-<Example file="styled-runs" height={250} title="Runs that flow inline" caption="Bold, italic and colored runs wrap together as one paragraph; on the right, a highlighted run inside justified text." />
+<Example file="styled-runs" title="Runs that flow inline" caption="Bold, italic and colored runs wrap together as one paragraph; on the right, a highlighted run inside justified text." />
 
 ## Syntax
 

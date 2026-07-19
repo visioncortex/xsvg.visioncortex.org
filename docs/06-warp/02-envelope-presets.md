@@ -9,9 +9,9 @@ Envelope presets are analytic deformation fields evaluated over the source geome
 They mirror Illustrator's **Make with Warp** menu: pick a `field`, dial the `bend`, and the field is
 baked into plain `<path>` geometry. All fifteen presets are fold-free at every bend.
 
-<Example file="warp-presets" height={420} title="The displacement & radial presets" caption="arch, flag, rise, wave, fisheye, inflate, squeeze, twist — each on a rect + outlined text (dashed = source box)." />
+<Example file="warp-presets" height={760} title="The displacement & radial presets" caption="arch, flag, rise, wave, fisheye, inflate, squeeze, twist — each on a rect + outlined text (dashed = source box)." />
 
-<Example file="warp-presets-arc" height={420} title="The arc & shell families" caption="arc, arc-lower/upper, bulge, fish, shell-lower/upper complete the Make-with-Warp catalog." />
+<Example file="warp-presets-arc" height={760} title="The arc & shell families" caption="arc, arc-lower/upper, bulge, fish, shell-lower/upper complete the Make-with-Warp catalog." />
 
 ## Syntax
 

@@ -9,7 +9,7 @@ Two warp fields work differently from the box-bound presets. `field="bend"` flow
 along a **referenced spine path**; `field="roughen"` jitters every outline point with **seeded value
 noise**. Both bake into plain `<path>` geometry like every other field.
 
-<Example file="warp-bend" height={360} title="Bend along a spine, and seeded roughen" caption="bend flows a rect + outlined text along #spine; roughen jitters outlines deterministically." />
+<Example file="warp-bend" title="Bend along a spine, and seeded roughen" caption="bend flows a rect + outlined text along #spine; roughen jitters outlines deterministically." />
 
 ## Bend — flow along a spine
 
