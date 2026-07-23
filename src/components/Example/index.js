@@ -38,7 +38,10 @@ export default function Example({
   caption,
   showSource = true,
   playground = true,
+  iframe = false, // render via the /preview iframe (which resolves cross-file <use href> deps)
+                  // instead of the inline <XsvgView> embed, which has no baseUrl passthrough
 }) {
+  const previewBase = useBaseUrl('/preview/');
   const viewerBase = useBaseUrl('/viewer/');
   const playgroundBase = useBaseUrl('/playground/');
   const datasetBase = useBaseUrl('/dataset/');
@@ -50,6 +53,7 @@ export default function Example({
   const query = file
     ? `?file=${encodeURIComponent(file)}`
     : `#src=${encodeURIComponent(toBase64(src || ''))}`;
+  const previewUrl = `${previewBase}${query}`;
   const viewerUrl = `${viewerBase}${query}`;
   const playgroundUrl = `${playgroundBase}${query}`;
 
@@ -93,18 +97,29 @@ export default function Example({
   return (
     <figure className={styles.example}>
       <div className={styles.frameWrap} style={frameStyle}>
-        <BrowserOnly fallback={<div className={styles.embedLoading}>Compiling…</div>}>
-          {() => {
-            // The lib's React embed — compiles xsvg → plain SVG inline, no iframe.
-            const { XsvgView } = require('@visioncortex/xsvg-viewer/react');
-            return (
-              <XsvgView
-                className={styles.embed}
-                {...(src ? { source: src } : { src: fileUrl })}
-              />
-            );
-          }}
-        </BrowserOnly>
+        {iframe ? (
+          // /preview resolves relative <use href="…"> deps against /dataset/
+          <iframe
+            className={styles.frame}
+            src={previewUrl}
+            title={title || (file ? `xsvg example: ${file}` : 'xsvg example')}
+            loading="lazy"
+            scrolling="no"
+          />
+        ) : (
+          <BrowserOnly fallback={<div className={styles.embedLoading}>Compiling…</div>}>
+            {() => {
+              // The lib's React embed — compiles xsvg → plain SVG inline, no iframe.
+              const { XsvgView } = require('@visioncortex/xsvg-viewer/react');
+              return (
+                <XsvgView
+                  className={styles.embed}
+                  {...(src ? { source: src } : { src: fileUrl })}
+                />
+              );
+            }}
+          </BrowserOnly>
+        )}
       </div>
 
       <div className={styles.toolbar}>

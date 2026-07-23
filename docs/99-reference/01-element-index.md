@@ -46,6 +46,12 @@ are real SVG names the compiler implements that browsers dropped or never shippe
 | `<x:mesh>` / `<x:face>` | Coons/tensor mesh gradients, baked to texel-aligned PNGs | [Mesh gradients](/docs/mesh-gradients/overview/) |
 | `<meshgradient>` | SVG 2 / Inkscape mesh gradient (revived as a fill source) | [Mesh gradients](/docs/mesh-gradients/overview/) |
 
+## Composition
+
+| Element | Summary | Reference |
+| --- | --- | --- |
+| `<use href="file.xsvg">` | pull in a whole file, or one element by id (`file.xsvg#id`), baked at compile time | [Cross-file `<use>`](/docs/composition/cross-file-use/) |
+
 ## See also
 
 - [Attribute index](/docs/reference/attribute-index/) — extension attributes on standard elements.

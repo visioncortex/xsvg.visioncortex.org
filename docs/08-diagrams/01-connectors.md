@@ -24,6 +24,25 @@ Because it references its endpoints, moving or resizing a box **re-derives** the
 compiled output. The connector reads the target's bounding box; it does not need the target to be a
 particular kind of element.
 
+## Endpoints — anchors & raw points
+
+By default each end attaches to the target's bounding box and the connector picks the side facing the
+other end. Two overrides take control of exactly where a line meets:
+
+- **Forced anchor** — `from="#id:anchor"` / `to="#id:anchor"` pins which point of the box the line
+  meets: an **edge** (`left` · `right` · `top` · `bottom`), a **corner** (`left-top` · `right-top` ·
+  `left-bottom` · `right-bottom`), or `center`. This lets both ends leave the *same* side — e.g. two
+  boxes side by side whose connectors both exit the top and arc over.
+- **Raw point** — `to-point="x,y"` (or `from-point="x,y"`) aims an end at an exact coordinate, with
+  no target element at all.
+
+<Example file="connector-anchors" title="Forced anchors and raw points" caption="#id:anchor pins the attach side or corner (both ends leave the top, or the bottom); to-point aims at a bare coordinate." />
+
+```xml
+<x:connector from="#a:left-top" to="#b:top" route="curve" arrow="both"/>
+<x:connector from="#p:right" to-point="470,312" route="curve"/>
+```
+
 ## Routes
 
 | `route` | Shape |
@@ -52,8 +71,9 @@ protrudes past the sharp tip regardless of its width.
 
 | Attribute | Values | Description |
 | --- | --- | --- |
-| `from` | `#id` | the source element (its bounding box is one endpoint) |
-| `to` | `#id` | the target element |
+| `from` | `#id` or `#id:anchor` | the source element (its bounding box is one endpoint); an optional anchor forces the attach point |
+| `to` | `#id` or `#id:anchor` | the target element, with an optional forced anchor |
+| `from-point` / `to-point` | `x,y` | attach an end to a raw coordinate instead of an element |
 | `route` | `straight` / `x-major` / `y-major` / `curve` | route shape (see above); default `straight` |
 | `arrow` | `end` / `start` / `both` / `none` | arrowhead placement; default `end` |
 | `arrow-size` | length | arrowhead height; default `max(3.5·stroke-width, 7)` |
