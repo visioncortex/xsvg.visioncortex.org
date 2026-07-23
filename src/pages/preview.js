@@ -35,7 +35,15 @@ function PreviewSurface({ datasetBase }) {
         const params = new URLSearchParams(window.location.search);
         // ?slides=false starts a multi-artboard document with its rail collapsed.
         const slides = params.get('slides') !== 'false';
-        preview = createPreview(hostRef.current, { hashDeepLink: true, showErrors: true, slides });
+        // Resolve relative <use href="…"> deps against /dataset/ (not the /preview/
+        // page URL), so cross-file samples like use-link.xsvg fetch their deps.
+        const baseUrl = new URL(datasetBase, window.location.origin).href;
+        preview = createPreview(hostRef.current, {
+          hashDeepLink: true,
+          showErrors: true,
+          slides,
+          baseUrl,
+        });
 
         const file = params.get('file');
         const shared = window.location.hash.match(/^#src=(.*)$/);

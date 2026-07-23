@@ -139,6 +139,11 @@
         "file": "lists.xsvg",
         "title": "Bullet & numbered lists",
         "blurb": "<x:list> / <x:li indent='N'>: hanging-indent items whose drawn bullet shapes (disc / ring / square, optically balanced) and decimal→alpha→roman numbers cycle by depth, with the outer counter resuming after each sublist; a third list flows inside a referenced card (§6.14)"
+      },
+      {
+        "file": "bordered-text.xsvg",
+        "title": "Bordered text",
+        "blurb": "x:border-width / x:border-color: an outline hugging each glyph that sits behind the fill (paint-order) so it never thins the letters; border-width is the width visible outside the glyph — shown scaling 1→3→6 over a gradient (§6.17)"
       }
     ]
   },
@@ -208,6 +213,11 @@
         "file": "connectors.xsvg",
         "title": "Connectors",
         "blurb": "lines bound to two boxes, routed four ways — straight (edge-clipped), x-major and y-major orthogonal rails, and a smooth curve; arrowheads tint to the stroke, and the route re-derives when an endpoint moves"
+      },
+      {
+        "file": "connector-anchors.xsvg",
+        "title": "Endpoints — anchors & points",
+        "blurb": "beyond a bare #id: force which connection point a connector meets with #id:anchor — an edge, a corner (left-top…), or center — so same-side pairs curve into a leaf; or aim at a raw coordinate with to-point=\"x,y\", needing no target element"
       }
     ]
   },
@@ -311,6 +321,11 @@
         "file": "compose.xsvg",
         "title": "Reference the compiled output",
         "blurb": "a textbox flowed inside a boolean union; type riding a warp's arched spine; a path → warp → textpath chain with one edit point"
+      },
+      {
+        "file": "use-link.xsvg",
+        "title": "Cross-file <use> links",
+        "blurb": "<use href=\"logo.xsvg\"> pulls in another file at compile time — the whole lockup, or just logo.xsvg#icon (one element by id, sized to its own extent) — so the xsvg mark is authored once and baked into the logo and every icon (§4.2)"
       }
     ]
   },

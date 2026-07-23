@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:x="https://xsvg.visioncortex.org"
+     viewBox="0 0 560 320" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <rect x="0" y="0" width="560" height="320" fill="#ffffff"/>
+  <text x="28" y="36" font-size="15" font-weight="700" fill="#0f172a">&lt;use href&gt; — author once, reuse everywhere (baked in)</text>
+
+  <!-- The whole file → the full logo lockup, as a nested <svg> viewport. -->
+  <text x="28" y="78" font-size="11" fill="#94a3b8">href="logo.xsvg" — the whole file</text>
+  <use href="logo.xsvg" x="28" y="90" width="250"/>
+
+  <!-- Just one element by #id → reuse the mark alone, at any size. -->
+  <text x="28" y="184" font-size="11" fill="#94a3b8">href="logo.xsvg#icon" — just the mark, by id</text>
+  <use href="logo.xsvg#icon" x="28" y="198" width="72" height="72"/>
+  <use href="logo.xsvg#icon" x="116" y="214" width="56" height="56"/>
+  <use href="logo.xsvg#icon" x="188" y="226" width="44" height="44"/>
+
+  <x:textbox x="272" y="196" width="264" height="112" font-size="13" fill="#475569">
+    One logo.xsvg is the single source of truth: link the whole file for the lockup, or logo.xsvg#icon for just the mark. Edit it once and every instance here updates. Output stays plain, self-contained SVG.
+  </x:textbox>
+</svg>

@@ -18,10 +18,11 @@ function clean(s) {
 
 function Card({ sample }) {
   const previewUrl = useBaseUrl(`/preview/?file=${sample.file}`);
+  const viewerUrl = useBaseUrl(`/viewer/?file=${sample.file}`);
   const playgroundUrl = useBaseUrl(`/playground/?file=${sample.file}`);
   return (
     <div className={styles.card}>
-      <Link className={styles.thumbLink} to={playgroundUrl}>
+      <Link className={styles.thumbLink} to={viewerUrl}>
         <iframe
           className={styles.thumb}
           src={previewUrl}
@@ -35,9 +36,6 @@ function Card({ sample }) {
         <h3 className={styles.cardTitle}>{sample.title}</h3>
         <p className={styles.cardBlurb}>{clean(sample.blurb)}</p>
         <div className={styles.cardLinks}>
-          <a href={previewUrl} target="_blank" rel="noopener noreferrer">
-            Preview ↗
-          </a>
           <Link to={playgroundUrl}>Edit in Playground →</Link>
         </div>
       </div>
@@ -53,7 +51,8 @@ export default function Examples() {
           <h1>Examples</h1>
           <p>
             Every card is a complete xsvg document, compiled live in your browser. Click any one to
-            open it in the <Link to={useBaseUrl('/playground/')}>playground</Link> and edit it.
+            open it in the <Link to={useBaseUrl('/viewer/')}>viewer</Link> (pan, zoom, inspect), or
+            hit <strong>Edit in Playground</strong> to tweak it.
           </p>
         </header>
         {catalog.map((cat) => (

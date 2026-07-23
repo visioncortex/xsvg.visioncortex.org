@@ -69,7 +69,10 @@ function PlaygroundApp({ datasetBase }) {
       ]);
       if (disposed || !editorHost.current || !previewHost.current) return;
 
-      previewRef.current = viewer.createPreview(previewHost.current);
+      // Resolve relative <use href="…"> deps against /dataset/ so cross-file
+      // samples (e.g. use-link.xsvg → logo.xsvg) load their deps while editing.
+      const baseUrl = new URL(datasetBase, window.location.origin).href;
+      previewRef.current = viewer.createPreview(previewHost.current, { baseUrl });
 
       const view = new EditorView({
         doc: '',
