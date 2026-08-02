@@ -27,9 +27,14 @@ if (!existsSync(datasetSrc)) {
 }
 
 mkdirSync(datasetOut, { recursive: true });
-const files = readdirSync(datasetSrc).filter((f) => f.endsWith('.xsvg'));
+// .wasm too: a sample using <x:import src="clipart.wasm"> fetches the module
+// alongside the document, so the generator module is part of the dataset.
+const files = readdirSync(datasetSrc).filter((f) => f.endsWith('.xsvg') || f.endsWith('.wasm'));
 for (const f of files) copyFileSync(join(datasetSrc, f), join(datasetOut, f));
-console.log(`[sync-dataset] copied ${files.length} .xsvg samples → static/dataset/`);
+const xsvgCount = files.filter((f) => f.endsWith('.xsvg')).length;
+console.log(
+  `[sync-dataset] copied ${xsvgCount} .xsvg samples + ${files.length - xsvgCount} .wasm modules → static/dataset/`,
+);
 
 // Extract the CATALOG array literal from catalog.ts and evaluate it as JSON-ish data.
 // The file is a hand-maintained TS module exporting `export const CATALOG: Category[] = [ … ];`.

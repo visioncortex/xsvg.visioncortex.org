@@ -52,6 +52,12 @@ are real SVG names the compiler implements that browsers dropped or never shippe
 | --- | --- | --- |
 | `<use href="file.xsvg">` | pull in a whole file, or one element by id (`file.xsvg#id`), baked at compile time | [Cross-file `<use>`](/docs/composition/cross-file-use/) |
 
+## Extensibility
+
+| Element | Summary | Reference |
+| --- | --- | --- |
+| `<x:import>` | bind an XML namespace to a WASM generator module, so its elements compile like built-ins | [Loadable generators](/docs/extensibility/generators/) |
+
 ## See also
 
 - [Attribute index](/docs/reference/attribute-index/) — extension attributes on standard elements.

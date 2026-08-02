@@ -50,7 +50,24 @@ other end. Two overrides take control of exactly where a line meets:
 | `straight` *(default)* | direct line, endpoints clipped to each box's edge along the center-to-center ray |
 | `x-major` | orthogonal rail, **horizontal-first** — exits the facing side and elbows at the horizontal midpoint (H–V–H) |
 | `y-major` | orthogonal rail, **vertical-first** — exits top/bottom and elbows at the vertical midpoint (V–H–V) |
-| `curve` | a cubic with tangents along the dominant axis (horizontal when the boxes are side-by-side, vertical when stacked) |
+| `curve` | a cubic bowing out by a fixed `bulge`, each end leaving its anchor tilted toward the other |
+
+### Routing around, not through
+
+A rail draws its plain 2-turn Z only when the two exits **face each other with room**. When the far
+endpoint sits *behind* the exit — `a:right → b:left` with `b`'s left edge at or behind `a`'s right
+edge — that Z would double the line straight back through its own box, so the route flips to a
+4-turn detour: it stubs out of each box and crosses over on a line that clears both, the way Google
+Docs elbow connectors do. `curve` makes the analogous flip, becoming a **rounded elbow** (the rail
+path with filleted corners) so it routes around and still meets each edge along its normal instead
+of cutting flat across the boxes.
+
+<Example file="connector-rail-flip" title="Rail vs curve, as B moves behind A" caption="the same a:right → b:left pair at three offsets: facing with room draws the 2-turn Z; behind flips to the detour, and the curve to a rounded elbow." />
+
+A forced anchor also decides **which axis its rail leaves along**: `:top` on an `x-major` rail is the
+more specific instruction, so the rail leaves vertically. When one end exits horizontally and the
+other vertically, the route goes through the corner where the two exit lines meet, stubbing clear
+first if that corner would land inside a box.
 
 ## Arrowheads
 
@@ -75,6 +92,7 @@ protrudes past the sharp tip regardless of its width.
 | `to` | `#id` or `#id:anchor` | the target element, with an optional forced anchor |
 | `from-point` / `to-point` | `x,y` | attach an end to a raw coordinate instead of an element |
 | `route` | `straight` / `x-major` / `y-major` / `curve` | route shape (see above); default `straight` |
+| `bulge` | length | how far a `curve` bows out — a **fixed** amount, not scaled by the endpoint distance; default `44` |
 | `arrow` | `end` / `start` / `both` / `none` | arrowhead placement; default `end` |
 | `arrow-size` | length | arrowhead height; default `max(3.5·stroke-width, 7)` |
 | `stroke`, `stroke-width`, … | paint | the connector's own stroke (the arrowhead tints to it) |

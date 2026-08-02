@@ -32,6 +32,12 @@ The fill therefore stays exactly its authored weight; the border only adds aroun
 | --- | --- | --- | --- |
 | `x:border-width` | length | `0` (no border) | width of the outline visible **outside** each glyph |
 | `x:border-color` | paint | — | the border colour |
+| `x:border-opacity` | number | `1` | the border's opacity |
+
+All three are **declared** attributes, so an editing host offers them: the interactive viewer's
+inspector shows them for a pinned `<x:textbox>` or `<x:textpath>`. They live in the xsvg namespace
+(the unprefixed `border-*` spellings are reserved), so a host writes them with the prefix the
+document binds — see [writing a generator](/docs/extensibility/writing-a-generator/).
 
 ## How it lowers
 

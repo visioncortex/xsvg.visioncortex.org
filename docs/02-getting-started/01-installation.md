@@ -31,6 +31,11 @@ el.innerHTML = await compileXsvg(source);
 createPreview(host, { hashDeepLink: true }).render(source);
 ```
 
+Both take the host hooks a sandboxed embedder needs: `baseUrl` / `resolve` / `loader` for
+[cross-file `<use>`](/docs/composition/cross-file-use/) dependencies, and `plugins` (a
+`PluginLoader`, or `false`) for [`<x:import>` generator modules](/docs/extensibility/generators/).
+Unset, both default to a same-origin fetch against the document's base.
+
 ### React components
 
 `react` is an optional peer dependency. Two components, from the `/react` entry point:
@@ -43,6 +48,9 @@ import { XsvgView, XsvgViewInteractive } from "@visioncortex/xsvg-viewer/react";
 
 // full interactive viewer — pan/zoom, artboard deck, optional source inspector
 <XsvgViewInteractive src="/diagrams/deck.xsvg" inspector />
+
+// an inline document has no URL of its own — give it a base to resolve deps against
+<XsvgView source={source} baseUrl="/diagrams/" />
 ```
 
 This documentation site uses both: `XsvgView` powers the inline examples, and `XsvgViewInteractive`
@@ -84,6 +92,11 @@ import { writeFileSync } from "node:fs";
 
 writeFileSync("out.svg", compile(source, { fontDir: "./fonts" }));
 ```
+
+`basePath` links cross-file deps and `<x:import>` modules from disk; `plugins: false` loads no
+generator modules. For editing hosts the package also exposes the **incremental** entry points —
+`compileFragment`, `fragmentRange`, `dependents`, `normalizeSource` — so an edit re-emits one
+element instead of the document.
 
 ## CLI — pure Rust
 

@@ -21,7 +21,7 @@
     "@docusaurus/core": "^3.10.2",
     "@docusaurus/preset-classic": "^3.10.2",
     "@mdx-js/react": "^3.0.0",
-    "@visioncortex/xsvg-viewer": "^0.1.6",
+    "@visioncortex/xsvg-viewer": "^0.2.0",
     "clsx": "^2.1.1",
     "codemirror": "^6.0.2",
     "prism-react-renderer": "^2.4.1",

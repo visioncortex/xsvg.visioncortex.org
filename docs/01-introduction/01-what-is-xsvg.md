@@ -12,7 +12,9 @@ runtime, no script, no editor: the output opens anywhere an SVG does.
 The extensions add the things SVG never got — real text layout (wrapping, justification,
 shrink-to-fit, flow into any shape), envelope warps, boolean path algebra, offsets, self-routing
 connectors, gradient meshes, and a data-coordinate frame for charts. Every one of them **lowers to
-primitives SVG already renders**: `<path>`, `<text>`, `<image>`, gradients.
+primitives SVG already renders**: `<path>`, `<text>`, `<image>`, gradients. The set isn't closed
+either — a document can [load its own elements](/docs/extensibility/generators/) from a WASM
+generator module and they compile like the built-ins.
 
 <Example file="badges.xsvg" title="One document, many extensions" caption="Curved rim text, a warp-arched title, and a mesh-gradient medal — all compiled to plain SVG. Open the source to see the x: tags." />
 
@@ -31,6 +33,15 @@ You keep the `<svg>` root. Add one namespace declaration and start using extensi
 ```
 
 The win should cost **one tag-swap or one attribute**, and nothing you add can break the file.
+
+## Extensible for real
+
+The `x` is not only ours to spend. A document can
+[bind a namespace to a WASM module](/docs/extensibility/generators/) and use elements we never
+wrote — your clipart, your diagram vocabulary — compiled exactly like the built-ins. Two framings,
+both accurate: an **XML transformer in the XSLT tradition** (XML in, XML out, declaratively, with
+namespace-bound extension elements), and a **geometry shader** (a pure function from parameters to
+geometry, same numbers → same shape on every host).
 
 ## Degradation-safe by construction
 

@@ -42,6 +42,13 @@ const FeatureList = [
     description:
       'A data-coordinate frame: plot maps a domain onto a pixel box for bars and lines; pie turns a value into an angle with explode, donut, and polar-area. Paired with content-driven tables — all baked to plain shapes, no chart runtime.',
   },
+  {
+    title: 'Extensible by you',
+    file: 'clipart.xsvg',
+    to: '/docs/extensibility/generators/',
+    description:
+      'Write your own elements. Bind a namespace to a WASM plugin you build — XSLT’s extension elements, or a geometry shader, whichever you come from — and it composes like a built-in, runs the same in the browser, the CLI, and Node, and emits the same plain SVG.',
+  },
 ];
 
 function FeatureRow({ title, description, file, to, reverse }) {

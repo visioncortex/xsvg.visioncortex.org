@@ -53,6 +53,10 @@ function ViewerSurface({ datasetBase, playgroundBase }) {
       <XsvgViewInteractive
         className={styles.stage}
         {...(source ? { source } : { src })}
+        // An inline (shared) document has no URL of its own, so relative
+        // `<use href>` deps and `<x:import src>` modules resolve against
+        // /dataset/. A fetched `src` defaults its base to the document URL.
+        {...(source ? { baseUrl: new URL(datasetBase, window.location.origin).href } : {})}
         inspector
         droppable
       />

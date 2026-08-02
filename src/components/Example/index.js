@@ -38,8 +38,9 @@ export default function Example({
   caption,
   showSource = true,
   playground = true,
-  iframe = false, // render via the /preview iframe (which resolves cross-file <use href> deps)
-                  // instead of the inline <XsvgView> embed, which has no baseUrl passthrough
+  iframe = false, // render via the /preview iframe instead of the inline <XsvgView>
+                  // embed — e.g. for multi-artboard documents, where the preview
+                  // surface brings the slide deck
 }) {
   const previewBase = useBaseUrl('/preview/');
   const viewerBase = useBaseUrl('/viewer/');
@@ -115,6 +116,10 @@ export default function Example({
                 <XsvgView
                   className={styles.embed}
                   {...(src ? { source: src } : { src: fileUrl })}
+                  // An inline document has no URL of its own: resolve its relative
+                  // `<use href>` deps and `<x:import src>` modules against /dataset/.
+                  // A fetched sample defaults its base to the sample's own URL.
+                  {...(src ? { baseUrl: datasetBase } : {})}
                 />
               );
             }}

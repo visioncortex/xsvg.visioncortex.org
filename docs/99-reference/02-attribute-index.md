@@ -28,6 +28,7 @@ elements. (Attributes *inside* an `x:` element are unprefixed and documented on 
 | `outline` | text elements | `true` | [Create outlines](/docs/vector-output/create-outlines/) |
 | `x:border-width` | text elements | length | [Bordered text](/docs/text-layout/bordered-text/) |
 | `x:border-color` | text elements | paint | [Bordered text](/docs/text-layout/bordered-text/) |
+| `x:border-opacity` | text elements | number | [Bordered text](/docs/text-layout/bordered-text/) |
 
 ## Compile-time structure
 

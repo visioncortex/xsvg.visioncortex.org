@@ -7,8 +7,9 @@ dist/
 # Dependencies
 node_modules/
 
-# NOTE: static/dataset/*.xsvg IS committed (CI has no access to the sibling xsvg
-# repo). Refresh it from ../xsvg/dataset with `npm run sync:dataset`.
+# NOTE: static/dataset/*.xsvg and the *.wasm generator modules ARE committed (CI
+# has no access to the sibling xsvg repo). Refresh from ../xsvg/dataset with
+# `npm run sync:dataset`.
 
 # OS
 .DS_Store
