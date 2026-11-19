@@ -43,8 +43,23 @@ larger per-cell `font-size` also grows its row.
 to every other **body** row (rows with no header cell); the first data row is unstriped. Background
 precedence, highest first, is per-cell `bg` › header › stripe › `cell-fill`.
 
-Any cell — `td` or `th` — may override `align`, `valign`, `fill` (text color), `bg` (background), and
-`font-*` (family / size / weight / style / line-height) for that cell alone.
+## Column and row styles
+
+The cell properties — `align`, `valign`, `fill` (text color), `bg` (background), `font-*`,
+`line-height`, the spacings — can be set at three levels: on an **`<x:col>`** child (one per column,
+before the rows, like HTML's `<col>`), on an **`<x:tr>`**, and on the cell. A property resolves
+**cell › row › column › header default › table**, so a bold first column or a tinted header row is
+one declaration, and an inserted row keeps the look.
+
+```xml
+<x:table x="28" y="60" width="664" cols="150 * 2*" cell-padding="10" header-fill="#eef2ff">
+  <x:col font-weight="600"/>
+  <x:tr><x:th>Feature</x:th><x:th>What it does</x:th></x:tr>
+  <x:tr><x:td>Text layout</x:td><x:td>wraps, fits, justifies — this cell grows the row</x:td></x:tr>
+</x:table>
+```
+
+Cells carry [styled runs](/docs/text-layout/styled-runs/) (mixed sizes grow the row) and `<tbreak/>`.
 
 ## Attributes
 
@@ -58,8 +73,9 @@ Any cell — `td` or `th` — may override `align`, `valign`, `fill` (text color
 | `cell-fill` / `header-fill` | color | — | Default background for `<x:td>` / `<x:th>` cells. |
 | `stripe` | color | — | Zebra background for every other body row. |
 | `fill`, `align`, `valign`, `font-*` | as text | — | Default text color, alignment, and style for all cells. |
-
-Per cell, `<x:td>` / `<x:th>` accept `align`, `valign`, `fill`, `bg`, and `font-*` overrides.
+| `direction` | `ltr` / `rtl` | `ltr` | The cells' paragraph direction, resolved like `align`. |
+| `transform` | transform list | — | Passes through to the table's `<g>` — rotate or scale the table. |
+| `outline` | `true` | — | Trace every cell's text to paths ([create outlines](/docs/vector-output/create-outlines/)). |
 
 ## How it lowers
 
@@ -71,8 +87,7 @@ table.
 ## v0 limits
 
 No `colspan` / `rowspan` (merged cells) and no content-driven column widths — columns are author-set,
-exactly as the presentation tools do; both are deliberate scope choices. One flattened paragraph per
-cell (no inline `<tspan>` runs inside a cell yet).
+exactly as the presentation tools do; both are deliberate scope choices.
 
 ## See also
 

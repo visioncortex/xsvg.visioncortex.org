@@ -58,11 +58,17 @@ Outlining is the prerequisite for every feature that treats text as vector art:
 - **[Booleans](/docs/diagrams/booleans/)** — path algebra that references a text region needs that text
   as `<path>` geometry.
 
-## v0 limits
+## What the trace keeps
 
-Outline mode uses the base style per line: per-run styling, `justify`, `glyph-x-scale`, and
-`letter-spacing` / `word-spacing` do not apply to the traced path, and curved-shape region flow keeps
-its own per-line placement. Per-run outlining is future work.
+An outline traces what live text draws. Each run is traced in its own face, weight and size, and a
+line with `letter-spacing`, `word-spacing`, justification or `glyph-x-scale` is traced glyph by glyph
+at the positions the live text is laid at — pinned so live and outlined text render to the same
+pixels. A run's fill and [border](/docs/text-layout/bordered-text/) paint its own piece (all borders
+behind all fills), highlights and decorations bake as rectangles beside the paths, and every contour
+comes out **closed**, so a path editor sees closed shapes.
+
+`outline="true"` also works on `<x:list>` and `<x:table>` (every item's and cell's lines, generated
+numbers included), and `x:outline="true"` on `<text inline-size>` and plain point text.
 
 ## How it lowers
 

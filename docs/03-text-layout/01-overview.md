@@ -44,6 +44,12 @@ All three front-ends share one layout core (spec §6.1):
   placed alone and overflows. No hyphenation in v0.
 - **Fitting** — shrink-to-fit (`<x:textbox>` only) binary-searches the font size, re-wrapping each
   trial.
+- **Font family inherits** — a box, list, table or text on a path with no `font-family` of its own
+  takes the nearest ancestor's (a `<g>`, an `x:font` token, the root `<svg>`), as plain `<text>`
+  does, and measures in it. Only the family inherits: size and the other font properties stay the
+  element's own, so nothing above a box can reflow it.
+- **Empty text has a line** — an empty box, paragraph, item or cell lays one blank line where typing
+  would start, so an editor's caret has somewhere to sit.
 
 ## How it lowers
 

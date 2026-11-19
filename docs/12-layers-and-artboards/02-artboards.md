@@ -26,6 +26,14 @@ An artboard is a `<g x:artboard="Label">` — a named region, like an Illustrato
 |---|---|---|---|
 | `x:artboard` | text | — | marks the group as an artboard; the value is its name |
 | `x:frame` | `x y w h` | the group's bbox | optional explicit frame rectangle |
+| `x:fill` | paint | — | the slide's backdrop: lowered to a `<rect>` filling the frame, as the group's first child |
+
+`x:fill` replaces the hand-written background `<rect>` that repeated the frame's size — and it follows
+the group's transform, so a placed slide gets its backdrop at its own origin:
+
+```xml
+<g x:artboard="Intro" x:frame="0 0 720 405" x:fill="#0b1020"> … </g>
+```
 
 ## Tooling
 

@@ -33,7 +33,7 @@ const FeatureList = [
     file: 'home-diagrams.xsvg',
     to: '/docs/diagrams/connectors/',
     description:
-      'Connectors route between two elements’ edges — as an orthogonal H–V–H rail or a smooth curve — and re-derive when a box moves. With boolean path algebra and Minkowski offsets, the diagram primitives SVG lacks.',
+      'Connectors route between two elements’ edges — as an orthogonal H–V–H rail or a smooth curve — and re-derive when a box moves. With boolean path algebra, Minkowski offsets and live rounded corners, the diagram primitives SVG lacks.',
   },
   {
     title: 'Data visualization',

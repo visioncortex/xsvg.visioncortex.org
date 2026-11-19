@@ -30,6 +30,23 @@ per corner in `fill`.
 </x:mesh>
 ```
 
+## A mesh as paint
+
+Give an `<x:mesh>` an `id` and any shape can name it — like a `<meshgradient>` — as its **fill, its
+stroke, or both**:
+
+```xml
+<path d="…" fill="url(#sky)" stroke="url(#rim)" stroke-width="6"/>
+```
+
+A fill paints the mesh inside a clip of the geometry; a stroke paints it inside a clip of the stroke
+outline (width, caps, joins, dashes included). It works on the basic shapes, on
+[booleans](/docs/diagrams/booleans/) and [offsets](/docs/diagrams/offset/), and — outlined — on text,
+and it inherits from an ancestor like any paint. The mesh's coordinates are the painted element's
+user space, or, with **`units="objectBoundingBox"`** on the `<x:mesh>`, fractions of the element's
+bounding box — one mesh then fits every shape it paints. The reference is baked, so editing the mesh
+re-emits what it paints.
+
 ## Faces, corners, and interpolation
 
 Each `<x:face v="…">` names **3 or 4** counter-clockwise vertex indices into `points`, and the same
@@ -103,7 +120,8 @@ Covered dialect: `meshrow` / `meshpatch` / `stop` with one `c`/`C`/`l`/`L` edge 
 (feathering), the standard edge/corner inheritance (a patch after the first inherits its left edge
 reversed from its neighbour; later rows inherit top edges from above), `gradientTransform`,
 `gradientUnits="objectBoundingBox"`, and `type="bicubic"` (smoothstep-eased so adjacent patches meet
-C¹ and the bilinear Mach bands at seams disappear). The reference is compile-time baked. An
+C¹ and the bilinear Mach bands at seams disappear). The reference is compile-time baked, and the
+`<meshgradient>` definition itself is consumed — the output carries only the paint it lowers to. An
 unparseable dialect leaves the element as authored with a marker (unrendered live, exactly as in a
 browser).
 
@@ -114,8 +132,8 @@ with per-pixel region labels), then each region is refit with a seam-free shared
 one global least-squares fit, grown until the residual passes the profile tolerance — and serialized
 as a **tiny PNG** (often 2×2 texels, ~40 bytes of base64). The image is placed so its **texel centers
 land exactly on the grid vertices**, so the renderer's own smooth bilinear image filter reconstructs
-the fitted field. Each region is clipped by the **exact union of its face polygons** (nonzero), so
-cracks stay geometry-sharp at any zoom. A region whose fit collapses to a constant emits a plain
+the fitted field. Each region is clipped by the **outline of its faces**, so cracks stay
+geometry-sharp at any zoom and the clip stays small. A region whose fit collapses to a constant emits a plain
 `<path fill>` instead (with `fill-opacity` when translucent). Feathering serializes an **RGBA** PNG;
 fully opaque regions stay RGB. Degradations (bad indices, color-count mismatch, degenerate extent)
 skip with markers.

@@ -41,7 +41,7 @@ its I/O is synchronous:
   diamond (`A→B→D`, `A→C→D`) fetches `D` once. The default loader is same-origin `fetch`; an
   embedder can supply its own.
 
-Each dependency is compiled first, then **baked in**: a whole file becomes a nested `<svg>` viewport,
+Each dependency is compiled first, then **baked in**: a whole file becomes a clipped, positioned group (its viewport),
 a `file.xsvg#id` becomes that element sized to its own extent. Links form a DAG with cycle and depth
 guards, and anything unresolvable degrades with a marker instead of failing the compile. Nothing in
 the output refers back to the dependency.
@@ -52,8 +52,10 @@ A generator module is *declared*, not discovered: parsing alone reports every bi
 so the host fetches, integrity-checks, and instantiates the modules **before** the first compile and
 lowering never waits on I/O. From there a generator element behaves like any other element — the
 module returns markup, and the compiler **compiles that markup exactly like document content**: it
-may contain `x:` elements, which lower normally, and it passes the same subset checks, so a module
-cannot put anything in the output that a hand-written document couldn't. Container elements get
+may contain `x:` elements, which lower normally — and then the whole result is held to **stricter**
+rules than authored markup: no script or event handlers, no `<style>`, no `<foreignObject>`, no URL
+that leaves the document (links and paints must be same-document `#fragment`s or embedded images),
+and its ids are namespaced so they can't capture the document's own references. Container elements get
 their children compiled and measured first, and a child with no measurable geometry reports no box.
 
 Modules are cached across compiles (recompiling on every keystroke must not re-instantiate), while

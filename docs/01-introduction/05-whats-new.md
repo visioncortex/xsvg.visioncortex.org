@@ -11,6 +11,67 @@ Highlights from each release of the npm packages
 lockstep), newest first. The full, exhaustive record is the
 [CHANGELOG](https://github.com/visioncortex/xsvg/blob/main/CHANGELOG.md).
 
+## 0.3.0 — 19 Nov 2026
+
+**Live corners, outlines that match live text, and richer text blocks.**
+
+- **[Corners](/docs/diagrams/corners/)** — `x:corners` rounds, chamfers or scallops any corner of a
+  rect, polygon, polyline or path, the way a design tool's live corner does, compiled to exact arcs.
+  One radius or radii per corner, a style per corner, a theme token as the radius. A nested `<svg>`
+  takes it too, for rounded picture frames.
+- **[A mesh as any paint](/docs/mesh-gradients/overview/#a-mesh-as-paint)** — an `<x:mesh>` can be a
+  shape's fill, its stroke, or both, on booleans, offsets and outlined text as well;
+  `units="objectBoundingBox"` makes one mesh fit every shape it paints. Mesh output is far smaller
+  (a large mesh went from 3.5 MB to 53 KB) and no longer darkens at its rim.
+- **Outlines trace what live text draws** — spacing, justification, each run's own face and size,
+  its fill and border, highlights and decorations, as closed contours. Lists and tables
+  [outline](/docs/vector-output/create-outlines/) too.
+- **Text blocks take the whole type block.** Paragraphs, list items and table cells take
+  `letter-spacing`, `word-spacing` and the rest; [lists live inside text
+  boxes](/docs/paragraphs-lists-tables/lists/#lists-inside-a-textbox) alongside paragraphs; tables
+  gain [`<x:col>` and row styles](/docs/paragraphs-lists-tables/tables/#column-and-row-styles); tables
+  and lists take `transform`.
+- **[`text-transform`](/docs/text-layout/spacing/#text-transform--render-in-capitals)** renders text in
+  capitals (or lowercase) whatever case it was typed in, measured before layout.
+- **[`overflow="visible"`](/docs/text-layout/overflow/)** on a textbox lifts the crop.
+- **Runs everywhere** — styled runs now flow in curved region flow and `<text inline-size>`, carry
+  their own border, and repaint their stretch on text on a path.
+- **Drop shadows on text** — every [filter](/docs/filters/overview/) works on every text element, each
+  glyph casting its own shadow.
+- **Underlines draw whole in every browser**, including Safari under letter-spacing and on justified
+  lines — decorations bake to rectangles, and justification now widens the spaces only.
+- **Connector anchors sit on the shape** — on a rotated shape and around a circle's circumference.
+- **[`x:fill` on an artboard](/docs/layers-and-artboards/artboards/)** paints the slide's backdrop, and
+  [`<x:doc>`](/docs/reference/element-index/#document-settings) holds an editor's document settings.
+- **Compiled text inherits `font-family`** from its ancestors, as plain `<text>` always did — a
+  deck's root family now reaches its text boxes too.
+- **The CLI shapes text** with the same shaper resvg renders with (kerning, ligatures), and gains
+  `--to-path` / `--to-spline` to convert an element to editable paths.
+
+Existing documents compile the same, apart from text switching to an inherited `font-family` and a
+handful of pixel-level outline fixes. The npm packages keep their API.
+
+## 0.2.2 — 8 Oct 2026
+
+**A security fix and a round of typesetting.** Opening an untrusted document could run script — an
+attribute value containing a quote broke out and added an event handler. Every value is now escaped.
+Upgrade if you open documents you didn't write.
+
+- **[Styled runs](/docs/text-layout/styled-runs/) grow up** — mixed sizes in one paragraph,
+  superscript and subscript, underline and strike-through, links, and the `x:highlight` highlighter.
+- **Right-to-left paragraphs** — `direction="rtl"` on a textbox or a paragraph.
+- **Styled runs in lists and table cells**, and `<tbreak/>` inside them.
+- A rotated or scaled textbox now honours its `transform`, and `preserveAspectRatio` on a cross-file
+  `<use>` is forwarded.
+
+## 0.2.1 — 12 Aug 2026
+
+**A sandbox fix for plugins.** Generator output could still *fetch* — a remote image, a
+`javascript:` link, a `<foreignObject>` — which, combined with containers receiving compiled
+document content, could leak that content. Generator output can no longer reach the network, and
+its ids are namespaced. Authored markup is untouched. See
+[Loadable generators](/docs/extensibility/generators/#nothing-a-module-returns-escapes-the-sandbox).
+
 ## 0.2.0 — 2 Aug 2026
 
 **xsvg became extensible by anyone.**

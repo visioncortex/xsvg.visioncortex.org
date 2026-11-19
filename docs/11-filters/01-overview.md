@@ -46,6 +46,12 @@ Like other `-x-` vocabulary, an unsupporting browser ignores the whole declarati
 
 Each filtered element gets its own `<filter>` definition emitted immediately before it, with `color-interpolation-filters="sRGB"` (the CSS shorthands are specified in sRGB; SVG's linearRGB default is the classic mismatch bug), a region of −10% / 120% (so strokes outside the fill bbox survive), one primitive per function **in authored order**, and the numeric mappings the Filter Effects spec defines for each shorthand — so lowered output matches live browser rendering. The element's `filter` attribute is rewritten to `url(#…)`.
 
+**On text.** Every text element takes the same lowering — textboxes, lists, tables, text on a path,
+`<text inline-size>` and plain `<text>`. The filter wraps everything glyph-like (paragraphs, markers,
+baked decorations, outlines) and its region is computed from where the glyphs land, so a
+`drop-shadow` on a single line isn't clipped and each glyph casts its own shadow, as in a slide tool.
+Highlights stay outside the filter.
+
 `filter="url(#…)"` references, `none`, and any list the parser declines (an unknown function or an invalid argument) pass through untouched — mirroring CSS's whole-declaration-invalid rule; browsers still honor those live.
 
 ## See also

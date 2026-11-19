@@ -44,11 +44,12 @@ anchor at the **start** edge.
 
 ## How it lowers
 
-A justified line emits `textLength="<content-width>" lengthAdjust="spacing"` on its `<tspan>`; the
-renderer distributes the slack into the inter-glyph and inter-word spacing. Glyph *shapes* are not
-scaled — contrast [`glyph-x-scale`](/docs/text-layout/spacing/), which uses `lengthAdjust="spacingAndGlyphs"`. On a
-line that would carry both, justification wins. v0 spreads the slack uniformly across all gaps rather
-than word-gaps only.
+A justified line's slack — the content width less the line's natural advance — is shared equally by
+its **spaces**: the line's `<tspan>` carries `word-spacing="<authored + slack per space>"`, and
+nothing else changes. Glyph shapes and letter gaps are untouched — contrast
+[`glyph-x-scale`](/docs/text-layout/spacing/). This is what typesetting does, and it keeps underlines,
+strike-throughs and highlights whole across the widened gaps. On a line that would carry both,
+justification wins.
 
 ## See also
 

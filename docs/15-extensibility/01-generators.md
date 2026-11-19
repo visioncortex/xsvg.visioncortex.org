@@ -76,15 +76,28 @@ A generator element is not a second-class citizen bolted on at the end:
 - **It recompiles incrementally.** Editing the element re-emits it alone; editing an `<x:import>`
   re-emits every element in that namespace; editing an `in="#id"` target re-emits its dependents.
 
-## Nothing a module returns escapes the subset
+## Nothing a module returns escapes the sandbox
 
 The module's output is **compiled by the core exactly like document content** — it may contain `x:`
 elements, which lower normally (a generator can emit an `<x:offset>` and let the compiler do the
-work), and it passes the same subset checks: `<script>` and `<animate*>` dropped, `on*` attributes
-stripped, foreign namespaces dropped, nested generator elements refused. The guarantee is therefore
-narrow and firm: a module can put nothing in the output that a hand-written document couldn't. It is
-not a claim about cost — the native hosts bound a runaway module with wasmi fuel, but a browser
-cannot interrupt a synchronous call on its main thread.
+work). Then the whole lowered result passes one set of output rules, **stricter than for authored
+markup**:
+
+- nothing executes — `<script>`, `<animate*>` and `on*` handlers are dropped;
+- nothing **fetches** — every `href`, `src` and `url(…)` must be a same-document `#fragment` or an
+  embedded `data:image`, and `<foreignObject>` and `<style>` are dropped, so a module can't reach the
+  network or make the host read another file;
+- nothing **collides** — the ids a module emits are namespaced to the element that produced them, so
+  they can't shadow the document's own and capture its references.
+
+What was removed is counted in a marker rather than swallowed. The fetch rule matters most for
+containers: a container module is handed its children already compiled — real document content — so
+any outbound request would let it exfiltrate them. Authored markup is deliberately untouched; an
+author writing a remote `<image href>` chose it.
+
+None of this is a claim about cost: the native hosts bound a runaway module with wasmi fuel, but a
+browser can't interrupt a synchronous call on its main thread. And a same-origin module without
+`integrity` is trusted on first use — pin the hash for anything you didn't write.
 
 [Totality](/docs/introduction/graceful-degradation/) holds too. A module that fails to load, fails
 its `integrity` check, declines an element, or returns malformed markup degrades **that element**

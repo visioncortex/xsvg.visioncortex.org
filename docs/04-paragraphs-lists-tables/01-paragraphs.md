@@ -50,7 +50,12 @@ heading, an indented body paragraph, and a small colored label without three sep
 | `space-after` | `<x:p>` | length | `paragraph-spacing` | Extra gap below this paragraph. |
 | `align` | `<x:p>` | `start` / `middle` / `end` / `justify` | box's `align` | Per-paragraph alignment. |
 | `text-indent` | `<x:p>` | length | `0` | First-line indent for this paragraph. |
-| `font-*`, `fill` | `<x:p>` | as text | box's value | Per-paragraph style over the box defaults. |
+| `font-*`, `fill`, spacings | `<x:p>` | as text | box's value | Per-paragraph style over the box defaults. |
+| `direction` | box, `<x:p>` | `ltr` / `rtl` | `ltr` | Under `rtl` the start edge is the right one: `start` right-aligns and the indent insets from the right. |
+
+A paragraph can hold [styled runs](/docs/text-layout/styled-runs/), and a
+[`<x:list>`](/docs/paragraphs-lists-tables/lists/#lists-inside-a-textbox) can stand among the
+paragraphs. An empty `<x:p>` owns one blank row — the blank line a double Enter produces.
 
 ## How it lowers
 
@@ -58,11 +63,11 @@ Each `<x:p>` compiles to its own `<text>` element carrying the source range of t
 viewer's inspector resolves a click to the individual paragraph. There is no runtime — the output is
 positioned live `<text>`.
 
-## v0 limits
+## Limits
 
-Paragraph mode is **live text**: no create-outlines, no `<tspan>` runs inside a single paragraph, and
-it applies to the **rectangular** box only. A curved `in="#shape"` region ignores `<x:p>` and flows as
-one block.
+Paragraph mode applies to the **rectangular** box only — a curved `in="#shape"` region ignores `<x:p>`
+and flows as one block. Glyph order within a right-to-left line is left to the renderer's bidi
+algorithm.
 
 ## See also
 

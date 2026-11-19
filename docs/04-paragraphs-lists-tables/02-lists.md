@@ -66,8 +66,30 @@ so a list can sit `top`, `middle`, or `bottom` inside a card.
 | `item-spacing` | length | `0.35em` | Extra vertical gap between items. |
 | `font-*`, `line-height`, `fill` | as text | — | Base style for every item. |
 
-An `<x:li>` may set `indent="N"`, `marker="…"`, and `font-size="…"` (a smaller sub-point). It inherits
-the list's size and line-height otherwise, and its marker scales to match its size.
+| `direction` | `ltr` / `rtl` | `ltr` | Item text starts from the right edge of its column under `rtl`. |
+| `transform` | transform list | — | Passes through to the list's `<g>` — rotate or scale the list. |
+| `outline` | `true` | — | Trace items and generated markers to paths. |
+
+An `<x:li>` may set `indent="N"` and `marker="…"`, and takes the whole type block over its list —
+`font-*`, `line-height`, `fill`, the spacings, `text-transform`, `direction`. Its marker scales with
+its size, and [styled runs](/docs/text-layout/styled-runs/) inside an item render.
+
+## Lists inside a textbox
+
+A `<x:list>` can stand among a textbox's [paragraphs](/docs/paragraphs-lists-tables/paragraphs/) as a
+block of the same stack — one box holds a heading, bullets and a closing paragraph, the way a
+presentation text box does, all under the box's shrink-to-fit, `valign` and padding:
+
+```xml
+<x:textbox x="40" y="60" width="384" height="240" font-size="14" fit="shrink">
+  <x:p font-weight="800">Agenda</x:p>
+  <x:list list="bullet"><x:li>Where we are</x:li><x:li indent="1">the numbers</x:li></x:list>
+  <x:p>Questions after.</x:p>
+</x:textbox>
+```
+
+Inside a box the list's placement attributes (`x`, `y`, `width`, `height`, `in`) are ignored; its
+markers, indent, spacing and style apply. The standalone list remains for a list placed on its own.
 
 ## How it lowers
 
@@ -77,8 +99,7 @@ selectable.
 
 ## v0 limits
 
-One style per item beyond `font-size` (inline `<tspan>` fill/weight inside an item is not yet applied).
-No shrink-to-fit or height clipping — the list flows from `valign` within the height but doesn't shrink
+A standalone list has no shrink-to-fit or height clipping (put it in a textbox for that) — the list flows from `valign` within the height but doesn't shrink
 to fit it. Number, roman, and character markers are live text (the glyphs must exist in the font);
 bullet shapes are drawn and font-independent.
 

@@ -33,6 +33,9 @@ other end. Two overrides take control of exactly where a line meets:
   meets: an **edge** (`left` · `right` · `top` · `bottom`), a **corner** (`left-top` · `right-top` ·
   `left-bottom` · `right-bottom`), or `center`. This lets both ends leave the *same* side — e.g. two
   boxes side by side whose connectors both exit the top and arc over.
+- Anchors sit **on the shape**: on a rotated or skewed shape `:top` is the shape's own top-edge
+  midpoint, mapped through its transform, and on a circle or ellipse the eight anchors lie on the
+  circumference (the diagonals at 45°) rather than floating at a bounding box's corners.
 - **Raw point** — `to-point="x,y"` (or `from-point="x,y"`) aims an end at an exact coordinate, with
   no target element at all.
 

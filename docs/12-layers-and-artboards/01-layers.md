@@ -30,6 +30,7 @@ Loose (non-layer) content is treated as content band, order 0, so it keeps its d
 | `x:layer` | `background` \| `foreground` \| any | content band | z-band: `background` sinks (−1), `foreground` floats (+1), any other value is the content band (0) |
 | `x:order` | number | `0` | within-band z-key; also works standalone as a plain z-index on any sibling |
 | `x:label` | text | — | human name; authoring metadata, stripped on emit |
+| `x:layer-key` | text | — | shared layer identity across artboards (the same logical layer on every slide); authoring metadata, stripped |
 | `x:hidden` | any but `false` | — | the element and its subtree compile to nothing |
 
 ## Still plain SVG uncompiled

@@ -17,9 +17,16 @@ overflow — too many lines (block) and a line too wide (inline) — and it work
 | Attribute | Values | Default | Effect |
 | --- | --- | --- | --- |
 | `text-overflow` | `clip` \| `ellipsis` | `clip` | how overflow is resolved on box-bound text |
+| `overflow` | `hidden` \| `visible` | `hidden` | whether the box crops at all (`<x:textbox>`, `<textArea>`) |
 
 `text-overflow` is the unprefixed CSS/SVG 2 name. `clip` is the default and reproduces SVG Tiny 1.2
-behavior.
+behavior. In paragraph mode the ellipsis lands on the block's last rendered line, whichever paragraph
+it falls in.
+
+**`overflow="visible"`** lifts the crop: every line renders where layout placed it, keeping the
+box's `valign` — so middle-aligned overflow spills both ways — and `text-overflow` has nothing to act
+on. Text flowed into a curved shape continues past it at the shape's bounding-box width. Fit still
+runs first; only the cropping is lifted.
 
 ## The two overflow axes
 

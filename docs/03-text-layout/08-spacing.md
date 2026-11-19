@@ -21,8 +21,15 @@ existing SVG/CSS names.
 
 | Attribute | Values | Initial | Effect |
 | --- | --- | --- | --- |
-| `letter-spacing` | `normal` \| length | `normal` (= `0`) | extra advance added per inter-grapheme gap |
-| `word-spacing` | `normal` \| length | `normal` (= `0`) | extra advance added per inter-word space |
+| `letter-spacing` | `normal` \| number | `normal` (= `0`) | extra advance added per inter-grapheme gap |
+| `word-spacing` | `normal` \| number | `normal` (= `0`) | extra advance added per inter-word space |
+
+A value is a number of user units (negative allowed, `px` may be written) or `normal`. A relative
+unit (`0.2em`, `10%`) or a `var()` is invalid and falls through to the next source — for a shared
+tracking value, put `letter-spacing` in an [`<x:font>` token](/docs/theming/overview/).
+
+Both work on a whole text element **and on its blocks**: a paragraph, a list item, a table cell,
+row or column takes its own spacing (a cell reads cell › row › column › table).
 
 ### Model
 
@@ -42,6 +49,22 @@ emitted on the output `<text>` so the renderer reproduces the exact width the la
 and `0` emit nothing. Counts use code points in v0.
 
 <Example file="word-spacing" title="word-spacing" caption="Wider inter-word gaps, and the same box wrapping sooner because the layout accounts for the added word space." />
+
+## `text-transform` — render in capitals
+
+`text-transform="uppercase"` (or `lowercase`, or `none`) renders text in that case whatever case it
+was typed in — the source keeps what the author wrote, so turning it off brings the typed case back.
+It works on every text element, on a `<tspan>` run, and in an `<x:font>` token (an *eyebrow* style is
+one token), cascading box › paragraph › run.
+
+The mapping is applied **before layout**, so wrapping, fitting, justification and outlines all
+measure the capitals that render, and the output carries the mapped characters — SVG has no
+`text-transform` attribute. It maps one character to one, so `ß` becomes `ẞ`.
+
+```xml
+<x:textbox x="20" y="20" width="240" height="40" text-transform="uppercase"
+           letter-spacing="2" font-size="12">Quarterly review</x:textbox>
+```
 
 ## `glyph-x-scale` — visual width scaling
 

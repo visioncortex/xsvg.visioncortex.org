@@ -16,7 +16,7 @@ output is one plain, self-contained SVG with no external dependency.
 
 | `href` | Brings in | Placement |
 | --- | --- | --- |
-| `file.xsvg` | the **whole file**, as a nested `<svg>` viewport | position with `x`/`y`; scale with `width`/`height` |
+| `file.xsvg` | the **whole file**, as a clipped viewport | position with `x`/`y`; scale with `width`/`height` |
 | `file.xsvg#id` | a **single element** by id, sized to its own extent | position with `x`/`y`; scale with `width`/`height` |
 
 ```xml
@@ -27,6 +27,11 @@ output is one plain, self-contained SVG with no external dependency.
 <use href="logo.xsvg#icon" x="28"  y="198" width="72" height="72"/>
 <use href="logo.xsvg#icon" x="116" y="214" width="56" height="56"/>
 ```
+
+A linked drawing's `<use>` keeps its `transform`, `opacity` and `filter`, and `preserveAspectRatio`
+is forwarded to the viewport — `none` stretches the drawing to the frame instead of letterboxing it.
+The viewport lowers to a clipped `<g>` rather than a nested `<svg>`, so a rotated or cropped link
+draws alike in every renderer (WebKit ignores a transform on a nested `<svg>`).
 
 ## Single source of truth
 
